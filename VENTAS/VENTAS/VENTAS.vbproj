@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AF3D6AC-66B0-4CB4-8ED8-6EBA8FCE5F79}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VENTAS.My.MyApplication</StartupObject>
+    <RootNamespace>VENTAS</RootNamespace>
+    <AssemblyName>VENTAS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VENTAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VENTAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RECURSOS\Icons-Land-Vista-People-Office-Customer-Male-Light.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmClientes.Designer.vb">
+      <DependentUpon>FrmClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmExonerarImpuesto.Designer.vb">
+      <DependentUpon>FrmExonerarImpuesto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmExonerarImpuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmFacturacion.Designer.vb">
+      <DependentUpon>FrmFacturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmFacturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmPeb.Designer.vb">
+      <DependentUpon>FrmPeb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmPeb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmPlantillas.Designer.vb">
+      <DependentUpon>FrmPlantillas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmPlantillas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmRp_Estadistica_Ventas_Asesor.Designer.vb">
+      <DependentUpon>FrmRp_Estadistica_Ventas_Asesor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FACTURACION\FrmRp_Estadistica_Ventas_Asesor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmMenu.Designer.vb">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OBJETOS\Funciones.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmClientes.resx">
+      <DependentUpon>FrmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmExonerarImpuesto.resx">
+      <DependentUpon>FrmExonerarImpuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmFacturacion.resx">
+      <DependentUpon>FrmFacturacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmPeb.resx">
+      <DependentUpon>FrmPeb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmPlantillas.resx">
+      <DependentUpon>FrmPlantillas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmRp_Estadistica_Ventas_Asesor.resx">
+      <DependentUpon>FrmRp_Estadistica_Ventas_Asesor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FrmMenu.resx">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RECURSOS\caja.ico" />
+    <Content Include="RECURSOS\Icons-Land-Vista-People-Office-Customer-Male-Light.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
