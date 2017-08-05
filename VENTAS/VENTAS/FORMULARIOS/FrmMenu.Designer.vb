@@ -22,7 +22,6 @@
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenu))
         Me.ribbonControl = New DevExpress.ExpressApp.Win.Templates.Ribbon.XafRibbonControlV2()
         Me.barActionContainerViewsHistoryNavigation = New DevExpress.ExpressApp.Win.Templates.Bars.ActionControls.BarLinkActionControlContainer()
@@ -83,8 +82,8 @@
         Me.barContainerNotifications = New DevExpress.XtraBars.BarLinkContainerExItem()
         Me.ribbonChooseSkinActionControl = New DevExpress.ExpressApp.Win.Templates.Ribbon.ActionControls.RibbonChooseSkinActionControl()
         Me.ribbonGallerySkins = New DevExpress.XtraBars.RibbonGalleryBarItem()
-        Me.applicationMenu = New DevExpress.XtraBars.Ribbon.ApplicationMenu(Me.components)
-        Me.mainBarAndDockingController = New DevExpress.XtraBars.BarAndDockingController(Me.components)
+        Me.applicationMenu = New DevExpress.XtraBars.Ribbon.ApplicationMenu()
+        Me.mainBarAndDockingController = New DevExpress.XtraBars.BarAndDockingController()
         Me.barMdiChildrenListItem = New DevExpress.XtraBars.BarDockingMenuItem()
         Me.barSubItemPanels = New DevExpress.XtraBars.BarSubItem()
         Me.barContainerStatusMessages = New DevExpress.XtraBars.BarLinkContainerExItem()
@@ -105,30 +104,37 @@
         Me.RepositoryItemSpinEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit()
         Me.BarEditItem5 = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemSpinEdit3 = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit()
+        Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem10 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RepositoryItemComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.RepositoryItemComboBox2 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.RepositoryItemTimeEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit()
         Me.RepositoryItemTimeEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit()
         Me.RepositoryItemDateEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
         Me.ribbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.dockManager = New DevExpress.XtraBars.Docking.DockManager(Me.components)
+        Me.dockManager = New DevExpress.XtraBars.Docking.DockManager()
         Me.dockPanelNavigation = New DevExpress.XtraBars.Docking.DockPanel()
         Me.dockPanelNavigation_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.navigation = New DevExpress.ExpressApp.Win.Templates.ActionContainers.NavigationActionContainer()
         Me.viewSitePanel = New DevExpress.XtraEditors.PanelControl()
-        Me.documentManager = New DevExpress.XtraBars.Docking2010.DocumentManager(Me.components)
-        Me.noDocumentsView = New DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView(Me.components)
-        Me.tabbedView = New DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(Me.components)
-        Me.nativeMdiView = New DevExpress.XtraBars.Docking2010.Views.NativeMdi.NativeMdiView(Me.components)
-        Me.viewSiteManager = New DevExpress.ExpressApp.Win.Templates.ViewSiteManager(Me.components)
-        Me.modelSynchronizationManager = New DevExpress.ExpressApp.Win.Templates.ModelSynchronizationManager(Me.components)
-        Me.formStateModelSynchronizer = New DevExpress.ExpressApp.Win.Core.FormStateModelSynchronizer(Me.components)
-        Me.templateContextMenu = New DevExpress.XtraBars.PopupMenu(Me.components)
-        Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.documentManager = New DevExpress.XtraBars.Docking2010.DocumentManager()
+        Me.noDocumentsView = New DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView()
+        Me.tabbedView = New DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView()
+        Me.nativeMdiView = New DevExpress.XtraBars.Docking2010.Views.NativeMdi.NativeMdiView()
+        Me.viewSiteManager = New DevExpress.ExpressApp.Win.Templates.ViewSiteManager()
+        Me.modelSynchronizationManager = New DevExpress.ExpressApp.Win.Templates.ModelSynchronizationManager()
+        Me.formStateModelSynchronizer = New DevExpress.ExpressApp.Win.Core.FormStateModelSynchronizer()
+        Me.templateContextMenu = New DevExpress.XtraBars.PopupMenu()
+        Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
+        Me.BarButtonItem11 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.ribbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.barActionContainerViewsHistoryNavigation, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.barActionContainerObjectsCreation, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -222,11 +228,11 @@
         Me.ribbonControl.BackColor = System.Drawing.Color.White
         Me.ribbonControl.Controller = Me.mainBarAndDockingController
         Me.ribbonControl.ExpandCollapseItem.Id = 0
-        Me.ribbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl.ExpandCollapseItem, Me.barMdiChildrenListItem, Me.barSubItemPanels, Me.barContainerViewsHistoryNavigation, Me.barContainerEdit, Me.barContainerUndoRedo, Me.barContainerView, Me.barContainerReports, Me.barContainerObjectsCreation, Me.barContainerFile, Me.barContainerSave, Me.barContainerPrint, Me.barContainerOpenObject, Me.barContainerRecordEdit, Me.barContainerWorkflow, Me.barContainerExport, Me.barContainerDefault, Me.barContainerPanels, Me.barContainerRecordsNavigation, Me.barContainerFilters, Me.barContainerSearch, Me.barContainerFullTextSearch, Me.barContainerViewsNavigation, Me.barContainerWindows, Me.barContainerTools, Me.barContainerOptions, Me.barContainerDiagnostic, Me.barContainerExit, Me.barContainerAbout, Me.barContainerMenu, Me.barContainerNotifications, Me.barContainerStatusMessages, Me.ribbonGallerySkins, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem6, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarEditItem1, Me.BarEditItem2, Me.BarEditItem3, Me.BarEditItem4, Me.BarEditItem5})
+        Me.ribbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl.ExpandCollapseItem, Me.barMdiChildrenListItem, Me.barSubItemPanels, Me.barContainerViewsHistoryNavigation, Me.barContainerEdit, Me.barContainerUndoRedo, Me.barContainerView, Me.barContainerReports, Me.barContainerObjectsCreation, Me.barContainerFile, Me.barContainerSave, Me.barContainerPrint, Me.barContainerOpenObject, Me.barContainerRecordEdit, Me.barContainerWorkflow, Me.barContainerExport, Me.barContainerDefault, Me.barContainerPanels, Me.barContainerRecordsNavigation, Me.barContainerFilters, Me.barContainerSearch, Me.barContainerFullTextSearch, Me.barContainerViewsNavigation, Me.barContainerWindows, Me.barContainerTools, Me.barContainerOptions, Me.barContainerDiagnostic, Me.barContainerExit, Me.barContainerAbout, Me.barContainerMenu, Me.barContainerNotifications, Me.barContainerStatusMessages, Me.ribbonGallerySkins, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem6, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarEditItem1, Me.BarEditItem2, Me.BarEditItem3, Me.BarEditItem4, Me.BarEditItem5, Me.BarButtonItem5, Me.BarButtonItem7, Me.BarButtonItem10, Me.BarButtonItem11})
         resources.ApplyResources(Me.ribbonControl, "ribbonControl")
-        Me.ribbonControl.MaxItemId = 37
+        Me.ribbonControl.MaxItemId = 41
         Me.ribbonControl.Name = "ribbonControl"
-        Me.ribbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
+        Me.ribbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage2})
         Me.ribbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemComboBox1, Me.RepositoryItemComboBox2, Me.RepositoryItemTimeEdit1, Me.RepositoryItemTimeEdit2, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemDateEdit3, Me.RepositoryItemSpinEdit1, Me.RepositoryItemSpinEdit2, Me.RepositoryItemSpinEdit3})
         Me.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.ribbonControl.StatusBar = Me.ribbonStatusBar
@@ -762,6 +768,33 @@
         Me.RepositoryItemSpinEdit3.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("RepositoryItemSpinEdit3.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines))})
         Me.RepositoryItemSpinEdit3.Name = "RepositoryItemSpinEdit3"
         '
+        'BarButtonItem5
+        '
+        resources.ApplyResources(Me.BarButtonItem5, "BarButtonItem5")
+        Me.BarButtonItem5.Glyph = Global.VENTAS.My.Resources.Resources.database_theapplication_3365
+        Me.BarButtonItem5.Id = 37
+        Me.BarButtonItem5.Name = "BarButtonItem5"
+        Me.BarButtonItem5.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'BarButtonItem7
+        '
+        resources.ApplyResources(Me.BarButtonItem7, "BarButtonItem7")
+        Me.BarButtonItem7.Glyph = Global.VENTAS.My.Resources.Resources.subir
+        Me.BarButtonItem7.Id = 38
+        Me.BarButtonItem7.Name = "BarButtonItem7"
+        Me.BarButtonItem7.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'BarButtonItem10
+        '
+        resources.ApplyResources(Me.BarButtonItem10, "BarButtonItem10")
+        Me.BarButtonItem10.Glyph = Global.VENTAS.My.Resources.Resources.guardar1
+        Me.BarButtonItem10.Id = 39
+        Me.BarButtonItem10.Name = "BarButtonItem10"
+        Me.BarButtonItem10.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
@@ -791,6 +824,31 @@
         Me.RibbonPageGroup2.ShowCaptionButton = False
         resources.ApplyResources(Me.RibbonPageGroup2, "RibbonPageGroup2")
         Me.RibbonPageGroup2.Visible = False
+        '
+        'RibbonPage2
+        '
+        Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3, Me.RibbonPageGroup4})
+        Me.RibbonPage2.Name = "RibbonPage2"
+        resources.ApplyResources(Me.RibbonPage2, "RibbonPage2")
+        '
+        'RibbonPageGroup3
+        '
+        Me.RibbonPageGroup3.AllowTextClipping = False
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.BarButtonItem5)
+        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
+        Me.RibbonPageGroup3.ShowCaptionButton = False
+        resources.ApplyResources(Me.RibbonPageGroup3, "RibbonPageGroup3")
+        '
+        'RibbonPageGroup4
+        '
+        Me.RibbonPageGroup4.AllowTextClipping = False
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem7)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem10)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem11)
+        Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
+        Me.RibbonPageGroup4.ShowCaptionButton = False
+        resources.ApplyResources(Me.RibbonPageGroup4, "RibbonPageGroup4")
+        Me.RibbonPageGroup4.Visible = False
         '
         'RepositoryItemComboBox1
         '
@@ -928,6 +986,15 @@
         Me.XtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPagesAndTabControlHeader
         Me.XtraTabbedMdiManager1.Controller = Me.mainBarAndDockingController
         Me.XtraTabbedMdiManager1.MdiParent = Me
+        '
+        'BarButtonItem11
+        '
+        resources.ApplyResources(Me.BarButtonItem11, "BarButtonItem11")
+        Me.BarButtonItem11.Glyph = Global.VENTAS.My.Resources.Resources.Delete_file_icon
+        Me.BarButtonItem11.Id = 40
+        Me.BarButtonItem11.Name = "BarButtonItem11"
+        Me.BarButtonItem11.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'FrmMenu
         '
@@ -1107,4 +1174,11 @@
     Friend WithEvents RepositoryItemSpinEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
     Friend WithEvents BarEditItem5 As DevExpress.XtraBars.BarEditItem
     Friend WithEvents RepositoryItemSpinEdit3 As DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit
+    Friend WithEvents BarButtonItem5 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPage2 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents RibbonPageGroup4 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents BarButtonItem7 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem10 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem11 As DevExpress.XtraBars.BarButtonItem
 End Class

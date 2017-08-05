@@ -361,6 +361,11 @@ Partial Public Class FrmMenu
     Private Sub BarButtonItem9_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem9.ItemClick
         cargar_formularios(Me, FrmRp_Estadistica_Ventas_Asesor)
     End Sub
+
+    Private Sub BarButtonItem5_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem5.ItemClick
+        cargar_formularios(Me, FrmImportar_Excell)
+        RibbonPageGroup4.Visible = True
+    End Sub
 End Class
 
 

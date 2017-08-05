@@ -123,6 +123,12 @@
     <Compile Include="FORMULARIOS\FACTURACION\FrmRp_Estadistica_Ventas_Asesor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FORMULARIOS\FrmImportar_Excell.Designer.vb">
+      <DependentUpon>FrmImportar_Excell.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmImportar_Excell.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\FrmMenu.Designer.vb">
       <DependentUpon>FrmMenu.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,9 @@
     <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmRp_Estadistica_Ventas_Asesor.resx">
       <DependentUpon>FrmRp_Estadistica_Ventas_Asesor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FrmImportar_Excell.resx">
+      <DependentUpon>FrmImportar_Excell.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FrmMenu.resx">
       <DependentUpon>FrmMenu.vb</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +199,12 @@
   <ItemGroup>
     <Content Include="RECURSOS\caja.ico" />
     <Content Include="RECURSOS\Icons-Land-Vista-People-Office-Customer-Male-Light.ico" />
+    <None Include="Resources\Delete-file-icon.png" />
+    <None Include="Resources\subir.png" />
+    <None Include="Resources\proformar2.png" />
+    <None Include="Resources\guardar1.png" />
+    <None Include="Resources\carpeta-uploadas.png" />
+    <None Include="Resources\database_theapplication_3365.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
