@@ -56,6 +56,7 @@
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Win.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -123,16 +124,28 @@
     <Compile Include="FORMULARIOS\FACTURACION\FrmRp_Estadistica_Ventas_Asesor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmImportar_Excell.Designer.vb">
+    <Compile Include="FORMULARIOS\CONFIGURACION\FrmImportar_Excell.Designer.vb">
       <DependentUpon>FrmImportar_Excell.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\FrmImportar_Excell.vb">
+    <Compile Include="FORMULARIOS\CONFIGURACION\FrmImportar_Excell.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORMULARIOS\FrmMenu.Designer.vb">
       <DependentUpon>FrmMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="FORMULARIOS\FrmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmPresentacion.Designer.vb">
+      <DependentUpon>FrmPresentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmPresentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmWorking.Designer.vb">
+      <DependentUpon>FrmWorking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\FrmWorking.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -171,11 +184,17 @@
     <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmRp_Estadistica_Ventas_Asesor.resx">
       <DependentUpon>FrmRp_Estadistica_Ventas_Asesor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\FrmImportar_Excell.resx">
+    <EmbeddedResource Include="FORMULARIOS\CONFIGURACION\FrmImportar_Excell.resx">
       <DependentUpon>FrmImportar_Excell.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FrmMenu.resx">
       <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FrmPresentacion.resx">
+      <DependentUpon>FrmPresentacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMULARIOS\FrmWorking.resx">
+      <DependentUpon>FrmWorking.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -199,12 +218,42 @@
   <ItemGroup>
     <Content Include="RECURSOS\caja.ico" />
     <Content Include="RECURSOS\Icons-Land-Vista-People-Office-Customer-Male-Light.ico" />
+    <None Include="Resources\Microsoft_Excel_2013_logo.svg.png" />
     <None Include="Resources\Delete-file-icon.png" />
     <None Include="Resources\subir.png" />
     <None Include="Resources\proformar2.png" />
     <None Include="Resources\guardar1.png" />
     <None Include="Resources\carpeta-uploadas.png" />
     <None Include="Resources\database_theapplication_3365.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

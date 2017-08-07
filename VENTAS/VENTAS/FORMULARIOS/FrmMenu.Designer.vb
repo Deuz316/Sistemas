@@ -22,6 +22,7 @@
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenu))
         Me.ribbonControl = New DevExpress.ExpressApp.Win.Templates.Ribbon.XafRibbonControlV2()
         Me.barActionContainerViewsHistoryNavigation = New DevExpress.ExpressApp.Win.Templates.Bars.ActionControls.BarLinkActionControlContainer()
@@ -82,11 +83,10 @@
         Me.barContainerNotifications = New DevExpress.XtraBars.BarLinkContainerExItem()
         Me.ribbonChooseSkinActionControl = New DevExpress.ExpressApp.Win.Templates.Ribbon.ActionControls.RibbonChooseSkinActionControl()
         Me.ribbonGallerySkins = New DevExpress.XtraBars.RibbonGalleryBarItem()
-        Me.applicationMenu = New DevExpress.XtraBars.Ribbon.ApplicationMenu()
-        Me.mainBarAndDockingController = New DevExpress.XtraBars.BarAndDockingController()
+        Me.applicationMenu = New DevExpress.XtraBars.Ribbon.ApplicationMenu(Me.components)
+        Me.mainBarAndDockingController = New DevExpress.XtraBars.BarAndDockingController(Me.components)
         Me.barMdiChildrenListItem = New DevExpress.XtraBars.BarDockingMenuItem()
         Me.barSubItemPanels = New DevExpress.XtraBars.BarSubItem()
-        Me.barContainerStatusMessages = New DevExpress.XtraBars.BarLinkContainerExItem()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
@@ -107,6 +107,8 @@
         Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem10 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem11 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem12 = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -119,22 +121,22 @@
         Me.RepositoryItemTimeEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit()
         Me.RepositoryItemDateEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
         Me.ribbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.dockManager = New DevExpress.XtraBars.Docking.DockManager()
+        Me.dockManager = New DevExpress.XtraBars.Docking.DockManager(Me.components)
         Me.dockPanelNavigation = New DevExpress.XtraBars.Docking.DockPanel()
         Me.dockPanelNavigation_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.navigation = New DevExpress.ExpressApp.Win.Templates.ActionContainers.NavigationActionContainer()
         Me.viewSitePanel = New DevExpress.XtraEditors.PanelControl()
-        Me.documentManager = New DevExpress.XtraBars.Docking2010.DocumentManager()
-        Me.noDocumentsView = New DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView()
-        Me.tabbedView = New DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView()
-        Me.nativeMdiView = New DevExpress.XtraBars.Docking2010.Views.NativeMdi.NativeMdiView()
-        Me.viewSiteManager = New DevExpress.ExpressApp.Win.Templates.ViewSiteManager()
-        Me.modelSynchronizationManager = New DevExpress.ExpressApp.Win.Templates.ModelSynchronizationManager()
-        Me.formStateModelSynchronizer = New DevExpress.ExpressApp.Win.Core.FormStateModelSynchronizer()
-        Me.templateContextMenu = New DevExpress.XtraBars.PopupMenu()
-        Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
-        Me.BarButtonItem11 = New DevExpress.XtraBars.BarButtonItem()
+        Me.documentManager = New DevExpress.XtraBars.Docking2010.DocumentManager(Me.components)
+        Me.noDocumentsView = New DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView(Me.components)
+        Me.tabbedView = New DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(Me.components)
+        Me.nativeMdiView = New DevExpress.XtraBars.Docking2010.Views.NativeMdi.NativeMdiView(Me.components)
+        Me.viewSiteManager = New DevExpress.ExpressApp.Win.Templates.ViewSiteManager(Me.components)
+        Me.modelSynchronizationManager = New DevExpress.ExpressApp.Win.Templates.ModelSynchronizationManager(Me.components)
+        Me.formStateModelSynchronizer = New DevExpress.ExpressApp.Win.Core.FormStateModelSynchronizer(Me.components)
+        Me.templateContextMenu = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.barContainerStatusMessages = New DevExpress.XtraBars.BarLinkContainerExItem()
         CType(Me.ribbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.barActionContainerViewsHistoryNavigation, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.barActionContainerObjectsCreation, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -228,9 +230,9 @@
         Me.ribbonControl.BackColor = System.Drawing.Color.White
         Me.ribbonControl.Controller = Me.mainBarAndDockingController
         Me.ribbonControl.ExpandCollapseItem.Id = 0
-        Me.ribbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl.ExpandCollapseItem, Me.barMdiChildrenListItem, Me.barSubItemPanels, Me.barContainerViewsHistoryNavigation, Me.barContainerEdit, Me.barContainerUndoRedo, Me.barContainerView, Me.barContainerReports, Me.barContainerObjectsCreation, Me.barContainerFile, Me.barContainerSave, Me.barContainerPrint, Me.barContainerOpenObject, Me.barContainerRecordEdit, Me.barContainerWorkflow, Me.barContainerExport, Me.barContainerDefault, Me.barContainerPanels, Me.barContainerRecordsNavigation, Me.barContainerFilters, Me.barContainerSearch, Me.barContainerFullTextSearch, Me.barContainerViewsNavigation, Me.barContainerWindows, Me.barContainerTools, Me.barContainerOptions, Me.barContainerDiagnostic, Me.barContainerExit, Me.barContainerAbout, Me.barContainerMenu, Me.barContainerNotifications, Me.barContainerStatusMessages, Me.ribbonGallerySkins, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem6, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarEditItem1, Me.BarEditItem2, Me.BarEditItem3, Me.BarEditItem4, Me.BarEditItem5, Me.BarButtonItem5, Me.BarButtonItem7, Me.BarButtonItem10, Me.BarButtonItem11})
+        Me.ribbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl.ExpandCollapseItem, Me.barMdiChildrenListItem, Me.barSubItemPanels, Me.barContainerViewsHistoryNavigation, Me.barContainerEdit, Me.barContainerUndoRedo, Me.barContainerView, Me.barContainerReports, Me.barContainerObjectsCreation, Me.barContainerFile, Me.barContainerSave, Me.barContainerPrint, Me.barContainerOpenObject, Me.barContainerRecordEdit, Me.barContainerWorkflow, Me.barContainerExport, Me.barContainerDefault, Me.barContainerPanels, Me.barContainerRecordsNavigation, Me.barContainerFilters, Me.barContainerSearch, Me.barContainerFullTextSearch, Me.barContainerViewsNavigation, Me.barContainerWindows, Me.barContainerTools, Me.barContainerOptions, Me.barContainerDiagnostic, Me.barContainerExit, Me.barContainerAbout, Me.barContainerMenu, Me.barContainerNotifications, Me.ribbonGallerySkins, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem6, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarEditItem1, Me.BarEditItem2, Me.BarEditItem3, Me.BarEditItem4, Me.BarEditItem5, Me.BarButtonItem5, Me.BarButtonItem7, Me.BarButtonItem10, Me.BarButtonItem11, Me.BarButtonItem12})
         resources.ApplyResources(Me.ribbonControl, "ribbonControl")
-        Me.ribbonControl.MaxItemId = 41
+        Me.ribbonControl.MaxItemId = 42
         Me.ribbonControl.Name = "ribbonControl"
         Me.ribbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage2})
         Me.ribbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemComboBox1, Me.RepositoryItemComboBox2, Me.RepositoryItemTimeEdit1, Me.RepositoryItemTimeEdit2, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemDateEdit3, Me.RepositoryItemSpinEdit1, Me.RepositoryItemSpinEdit2, Me.RepositoryItemSpinEdit3})
@@ -631,13 +633,6 @@
         Me.barSubItemPanels.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.barContainerPanels, True)})
         Me.barSubItemPanels.Name = "barSubItemPanels"
         '
-        'barContainerStatusMessages
-        '
-        resources.ApplyResources(Me.barContainerStatusMessages, "barContainerStatusMessages")
-        Me.barContainerStatusMessages.Id = 27
-        Me.barContainerStatusMessages.MergeType = DevExpress.XtraBars.BarMenuMerge.MergeItems
-        Me.barContainerStatusMessages.Name = "barContainerStatusMessages"
-        '
         'BarButtonItem1
         '
         resources.ApplyResources(Me.BarButtonItem1, "BarButtonItem1")
@@ -795,6 +790,24 @@
         Me.BarButtonItem10.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
+        'BarButtonItem11
+        '
+        resources.ApplyResources(Me.BarButtonItem11, "BarButtonItem11")
+        Me.BarButtonItem11.Glyph = Global.VENTAS.My.Resources.Resources.Delete_file_icon
+        Me.BarButtonItem11.Id = 40
+        Me.BarButtonItem11.Name = "BarButtonItem11"
+        Me.BarButtonItem11.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'BarButtonItem12
+        '
+        resources.ApplyResources(Me.BarButtonItem12, "BarButtonItem12")
+        Me.BarButtonItem12.Glyph = Global.VENTAS.My.Resources.Resources.Microsoft_Excel_2013_logo_svg
+        Me.BarButtonItem12.Id = 41
+        Me.BarButtonItem12.Name = "BarButtonItem12"
+        Me.BarButtonItem12.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
@@ -845,6 +858,7 @@
         Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem7)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem10)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem11)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem12)
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.ShowCaptionButton = False
         resources.ApplyResources(Me.RibbonPageGroup4, "RibbonPageGroup4")
@@ -883,7 +897,6 @@
         '
         'ribbonStatusBar
         '
-        Me.ribbonStatusBar.ItemLinks.Add(Me.barContainerStatusMessages)
         Me.ribbonStatusBar.ItemLinks.Add(Me.barContainerNotifications)
         resources.ApplyResources(Me.ribbonStatusBar, "ribbonStatusBar")
         Me.ribbonStatusBar.Name = "ribbonStatusBar"
@@ -987,14 +1000,12 @@
         Me.XtraTabbedMdiManager1.Controller = Me.mainBarAndDockingController
         Me.XtraTabbedMdiManager1.MdiParent = Me
         '
-        'BarButtonItem11
+        'barContainerStatusMessages
         '
-        resources.ApplyResources(Me.BarButtonItem11, "BarButtonItem11")
-        Me.BarButtonItem11.Glyph = Global.VENTAS.My.Resources.Resources.Delete_file_icon
-        Me.BarButtonItem11.Id = 40
-        Me.BarButtonItem11.Name = "BarButtonItem11"
-        Me.BarButtonItem11.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        resources.ApplyResources(Me.barContainerStatusMessages, "barContainerStatusMessages")
+        Me.barContainerStatusMessages.Id = 27
+        Me.barContainerStatusMessages.MergeType = DevExpress.XtraBars.BarMenuMerge.MergeItems
+        Me.barContainerStatusMessages.Name = "barContainerStatusMessages"
         '
         'FrmMenu
         '
@@ -1106,7 +1117,6 @@
     Private barContainerAbout As DevExpress.XtraBars.BarLinkContainerExItem
     Private barContainerMenu As DevExpress.XtraBars.BarLinkContainerExItem
     Private barContainerNotifications As DevExpress.XtraBars.BarLinkContainerExItem
-    Private barContainerStatusMessages As DevExpress.XtraBars.BarLinkContainerExItem
     Private ribbonGallerySkins As DevExpress.XtraBars.RibbonGalleryBarItem
     Private barActionContainerViewsNavigation As DevExpress.ExpressApp.Win.Templates.Bars.ActionControls.BarLinkActionControlContainer
     Private barActionContainerViewsHistoryNavigation As DevExpress.ExpressApp.Win.Templates.Bars.ActionControls.BarLinkActionControlContainer
@@ -1181,4 +1191,6 @@
     Friend WithEvents BarButtonItem7 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem10 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem11 As DevExpress.XtraBars.BarButtonItem
+    Private WithEvents barContainerStatusMessages As DevExpress.XtraBars.BarLinkContainerExItem
+    Friend WithEvents BarButtonItem12 As DevExpress.XtraBars.BarButtonItem
 End Class

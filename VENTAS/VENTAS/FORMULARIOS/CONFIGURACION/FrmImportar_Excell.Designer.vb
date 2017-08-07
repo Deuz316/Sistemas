@@ -23,19 +23,35 @@ Partial Class FrmImportar_Excell
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Detalle_Importacion = New System.Windows.Forms.DataGridView()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         CType(Me.Detalle_Importacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Detalle_Importacion
         '
+        Me.Detalle_Importacion.AllowUserToAddRows = False
+        Me.Detalle_Importacion.AllowUserToDeleteRows = False
+        Me.Detalle_Importacion.AllowUserToResizeColumns = False
+        Me.Detalle_Importacion.AllowUserToResizeRows = False
         Me.Detalle_Importacion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Detalle_Importacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.Detalle_Importacion.BackgroundColor = System.Drawing.SystemColors.Info
         Me.Detalle_Importacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Detalle_Importacion.GridColor = System.Drawing.SystemColors.Info
         Me.Detalle_Importacion.Location = New System.Drawing.Point(12, 12)
         Me.Detalle_Importacion.Name = "Detalle_Importacion"
+        Me.Detalle_Importacion.ReadOnly = True
+        Me.Detalle_Importacion.RowHeadersVisible = False
+        Me.Detalle_Importacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Detalle_Importacion.Size = New System.Drawing.Size(760, 537)
         Me.Detalle_Importacion.TabIndex = 0
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'FrmImportar_Excell
         '
@@ -53,4 +69,6 @@ Partial Class FrmImportar_Excell
     End Sub
 
     Friend WithEvents Detalle_Importacion As DataGridView
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class

@@ -216,9 +216,6 @@
   <data name="barSubItemPanels.Caption" xml:space="preserve">
     <value>Panels</value>
   </data>
-  <data name="barContainerStatusMessages.Caption" xml:space="preserve">
-    <value>StatusMessages</value>
-  </data>
   <data name="BarButtonItem1.Caption" xml:space="preserve">
     <value>Facturacion</value>
   </data>
@@ -2466,8 +2463,17 @@
   <data name="BarButtonItem11.Caption" xml:space="preserve">
     <value>Eliminar</value>
   </data>
+  <data name="BarButtonItem12.Caption" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
   <data name="ribbonControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
+  </data>
+  <data name="RibbonPageGroup1.Text" xml:space="preserve">
+    <value>Ventas</value>
+  </data>
+  <data name="RibbonPageGroup2.Text" xml:space="preserve">
+    <value>Opciones de Facturacion</value>
   </data>
   <data name="RibbonPage1.Text" xml:space="preserve">
     <value>Facturacion</value>
@@ -2515,13 +2521,13 @@
     <value>Combo</value>
   </data>
   <data name="ribbonControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1338, 146</value>
+    <value>1346, 146</value>
   </data>
   <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 750</value>
   </data>
   <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1338, 21</value>
+    <value>1346, 21</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
     <value>ribbonStatusBar</value>
@@ -2547,12 +2553,6 @@
   <data name="&gt;&gt;ribbonControl.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RibbonPageGroup1.Text" xml:space="preserve">
-    <value>Ventas</value>
-  </data>
-  <data name="RibbonPageGroup2.Text" xml:space="preserve">
-    <value>Opciones de Facturacion</value>
-  </data>
   <metadata name="dockManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>378, 17</value>
   </metadata>
@@ -2566,7 +2566,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1338, 771</value>
+    <value>1346, 771</value>
   </data>
   <data name="viewSitePanel.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>White</value>
@@ -2579,7 +2579,7 @@
     <value>0, 146</value>
   </data>
   <data name="viewSitePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1338, 604</value>
+    <value>1346, 604</value>
   </data>
   <data name="viewSitePanel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2977,12 +2977,6 @@
   <data name="&gt;&gt;barSubItemPanels.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barContainerStatusMessages.Name" xml:space="preserve">
-    <value>barContainerStatusMessages</value>
-  </data>
-  <data name="&gt;&gt;barContainerStatusMessages.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarLinkContainerExItem, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;BarButtonItem1.Name" xml:space="preserve">
     <value>BarButtonItem1</value>
   </data>
@@ -3101,6 +3095,18 @@
     <value>BarButtonItem10</value>
   </data>
   <data name="&gt;&gt;BarButtonItem10.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BarButtonItem11.Name" xml:space="preserve">
+    <value>BarButtonItem11</value>
+  </data>
+  <data name="&gt;&gt;BarButtonItem11.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BarButtonItem12.Name" xml:space="preserve">
+    <value>BarButtonItem12</value>
+  </data>
+  <data name="&gt;&gt;BarButtonItem12.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;RibbonPage1.Name" xml:space="preserve">
@@ -3235,11 +3241,11 @@
   <data name="&gt;&gt;XtraTabbedMdiManager1.Type" xml:space="preserve">
     <value>DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;BarButtonItem11.Name" xml:space="preserve">
-    <value>BarButtonItem11</value>
+  <data name="&gt;&gt;barContainerStatusMessages.Name" xml:space="preserve">
+    <value>barContainerStatusMessages</value>
   </data>
-  <data name="&gt;&gt;BarButtonItem11.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;barContainerStatusMessages.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarLinkContainerExItem, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMenu</value>
@@ -3247,32 +3253,17 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;dockPanelNavigation_Container.Name" xml:space="preserve">
-    <value>dockPanelNavigation_Container</value>
+  <data name="navigation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;dockPanelNavigation_Container.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.ControlContainer, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="navigation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;dockPanelNavigation_Container.Parent" xml:space="preserve">
-    <value>dockPanelNavigation</value>
-  </data>
-  <data name="&gt;&gt;dockPanelNavigation_Container.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="dockPanelNavigation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 143</value>
-  </data>
-  <data name="dockPanelNavigation.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="navigation.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 429</value>
   </data>
-  <data name="dockPanelNavigation.Text" xml:space="preserve">
-    <value>Navigation</value>
-  </data>
-  <data name="&gt;&gt;dockPanelNavigation.Name" xml:space="preserve">
-    <value>dockPanelNavigation</value>
-  </data>
-  <data name="&gt;&gt;dockPanelNavigation.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="navigation.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;navigation.Name" xml:space="preserve">
     <value>navigation</value>
@@ -3310,29 +3301,20 @@
   <data name="&gt;&gt;dockPanelNavigation_Container.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="navigation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="dockPanelNavigation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 143</value>
   </data>
-  <data name="navigation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="navigation.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dockPanelNavigation.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 429</value>
   </data>
-  <data name="navigation.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="dockPanelNavigation.Text" xml:space="preserve">
+    <value>Navigation</value>
   </data>
-  <data name="&gt;&gt;navigation.Name" xml:space="preserve">
-    <value>navigation</value>
+  <data name="&gt;&gt;dockPanelNavigation.Name" xml:space="preserve">
+    <value>dockPanelNavigation</value>
   </data>
-  <data name="&gt;&gt;navigation.Type" xml:space="preserve">
-    <value>DevExpress.ExpressApp.Win.Templates.ActionContainers.NavigationActionContainer, DevExpress.ExpressApp.Win.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;navigation.Parent" xml:space="preserve">
-    <value>dockPanelNavigation_Container</value>
-  </data>
-  <data name="&gt;&gt;navigation.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;dockPanelNavigation.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking.DockPanel, DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <metadata name="documentManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>505, 17</value>
@@ -3355,4 +3337,7 @@
   <metadata name="XtraTabbedMdiManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>185, 56</value>
   </metadata>
+  <data name="barContainerStatusMessages.Caption" xml:space="preserve">
+    <value>StatusMessages</value>
+  </data>
 </root>
