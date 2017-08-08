@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property anadir_boton_de_base_de_datos_para_la_interfaz_318_46634() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("anadir-boton-de-base-de-datos-para-la-interfaz_318-46634", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property carpeta_uploadas() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("carpeta-uploadas", resourceCulture)
@@ -116,6 +126,16 @@ Namespace My.Resources
         Friend ReadOnly Property proformar2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("proformar2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property servidor_de_base_de_datos() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("servidor-de-base-de-datos", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

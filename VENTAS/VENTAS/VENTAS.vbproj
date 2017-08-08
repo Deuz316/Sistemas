@@ -218,6 +218,8 @@
   <ItemGroup>
     <Content Include="RECURSOS\caja.ico" />
     <Content Include="RECURSOS\Icons-Land-Vista-People-Office-Customer-Male-Light.ico" />
+    <None Include="Resources\anadir-boton-de-base-de-datos-para-la-interfaz_318-46634.jpg" />
+    <None Include="Resources\servidor-de-base-de-datos.png" />
     <None Include="Resources\Microsoft_Excel_2013_logo.svg.png" />
     <None Include="Resources\Delete-file-icon.png" />
     <None Include="Resources\subir.png" />

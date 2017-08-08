@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmWorking
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,46 +20,56 @@ Partial Class FrmWorking
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.ProgressBarControl1 = New DevExpress.XtraEditors.ProgressBarControl()
-        CType(Me.ProgressBarControl1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btn_importar = New DevExpress.XtraEditors.SimpleButton()
+        Me.barra_estado_importacion = New System.Windows.Forms.ProgressBar()
+        Me.btn_salir = New DevExpress.XtraEditors.SimpleButton()
         Me.SuspendLayout()
         '
-        'SimpleButton1
+        'btn_importar
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(189, 36)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(75, 23)
-        Me.SimpleButton1.TabIndex = 0
-        Me.SimpleButton1.Text = "Importar"
+        Me.btn_importar.Location = New System.Drawing.Point(192, 47)
+        Me.btn_importar.Name = "btn_importar"
+        Me.btn_importar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_importar.TabIndex = 0
+        Me.btn_importar.Text = "Importar"
         '
-        'ProgressBarControl1
+        'barra_estado_importacion
         '
-        Me.ProgressBarControl1.Location = New System.Drawing.Point(12, 12)
-        Me.ProgressBarControl1.Name = "ProgressBarControl1"
-        Me.ProgressBarControl1.Size = New System.Drawing.Size(437, 18)
-        Me.ProgressBarControl1.TabIndex = 1
+        Me.barra_estado_importacion.Location = New System.Drawing.Point(12, 24)
+        Me.barra_estado_importacion.Name = "barra_estado_importacion"
+        Me.barra_estado_importacion.Size = New System.Drawing.Size(437, 17)
+        Me.barra_estado_importacion.TabIndex = 1
+        '
+        'btn_salir
+        '
+        Me.btn_salir.Location = New System.Drawing.Point(192, 47)
+        Me.btn_salir.Name = "btn_salir"
+        Me.btn_salir.Size = New System.Drawing.Size(75, 23)
+        Me.btn_salir.TabIndex = 3
+        Me.btn_salir.Text = "Salir"
+        Me.btn_salir.Visible = False
         '
         'FrmWorking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(461, 74)
-        Me.Controls.Add(Me.ProgressBarControl1)
-        Me.Controls.Add(Me.SimpleButton1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.ClientSize = New System.Drawing.Size(461, 79)
+        Me.Controls.Add(Me.btn_salir)
+        Me.Controls.Add(Me.barra_estado_importacion)
+        Me.Controls.Add(Me.btn_importar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmWorking"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.ProgressBarControl1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents ProgressBarControl1 As DevExpress.XtraEditors.ProgressBarControl
+    Friend WithEvents btn_importar As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents barra_estado_importacion As ProgressBar
+    Friend WithEvents btn_salir As DevExpress.XtraEditors.SimpleButton
 End Class

@@ -187,13 +187,11 @@ Module FUNCIONES
                     command.Parameters.AddWithValue("@IMPUESTO", Convert.ToString(row.Cells("IMPUESTO").Value))
                     command.Parameters.AddWithValue("@ACTIVO", Convert.ToString(row.Cells("ACTIVO").Value))
                     command.Parameters.AddWithValue("@LOCAL", Convert.ToString(row.Cells("LOCAL").Value))
-                    command.ExecuteNonQuery()
                     conteo = conteo + 1
-                    FrmWorking.ProgressBarControl1.EditValue = conteo
+                    command.ExecuteNonQuery()
+                    FrmWorking.barra_estado_importacion.Value = conteo
                 Next
                 cnn.Close()
-                FrmPresentacion.Close()
-                MessageBox.Show("Documento guardado exitosamente", "Modulo de Importacion & Exportacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End Using
         Catch ex As Exception
             Recorrer_DGV = False
