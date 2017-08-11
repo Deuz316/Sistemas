@@ -199,4 +199,13 @@ Module FUNCIONES
         End Try
         Return Recorrer_DGV
     End Function
+
+    Public Function Llenar_combobox(control As DevExpress.XtraEditors.ComboBoxEdit) As Boolean
+        Try
+            Llenar_combobox = True
+
+        Catch ex As Exception
+            Llenar_combobox = False
+        End Try
+    End Function
 End Module

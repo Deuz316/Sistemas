@@ -47,7 +47,7 @@ Partial Class FrmWorking
         '
         'btn_salir
         '
-        Me.btn_salir.Location = New System.Drawing.Point(200, 61)
+        Me.btn_salir.Location = New System.Drawing.Point(201, 61)
         Me.btn_salir.Name = "btn_salir"
         Me.btn_salir.Size = New System.Drawing.Size(75, 23)
         Me.btn_salir.TabIndex = 3
@@ -59,7 +59,6 @@ Partial Class FrmWorking
         Me.cbo_opciones_importacion.Location = New System.Drawing.Point(12, 12)
         Me.cbo_opciones_importacion.Name = "cbo_opciones_importacion"
         Me.cbo_opciones_importacion.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cbo_opciones_importacion.Properties.Items.AddRange(New Object() {"Catalogo de Productos", "Historico de Ventas", "Historico de Importaciones"})
         Me.cbo_opciones_importacion.Properties.NullValuePrompt = "Seleccionar Tipo"
         Me.cbo_opciones_importacion.Properties.NullValuePromptShowForEmptyValue = True
         Me.cbo_opciones_importacion.Size = New System.Drawing.Size(437, 20)
