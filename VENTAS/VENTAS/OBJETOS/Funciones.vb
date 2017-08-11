@@ -174,7 +174,7 @@ Module FUNCIONES
                     command.Parameters.AddWithValue("@TIPO", Convert.ToString(row.Cells("TIPO").Value))
                     command.Parameters.AddWithValue("@UDM", Convert.ToString(row.Cells("UDM").Value))
                     command.Parameters.AddWithValue("@FOB", Convert.ToDecimal(row.Cells("FOB").Value))
-                    command.Parameters.AddWithValue("@CIF", Convert.ToDecimal(row.Cells("FOB").Value))
+                    command.Parameters.AddWithValue("@CIF", Convert.ToDecimal(row.Cells("CIF").Value))
                     command.Parameters.AddWithValue("@PRECIO", Convert.ToDecimal(row.Cells("PRECIO").Value))
                     command.Parameters.AddWithValue("@EXISTENCIAS", Convert.ToDecimal(row.Cells("EXISTENCIAS").Value))
                     command.Parameters.AddWithValue("@RACK", Convert.ToString(row.Cells("RACK").Value))
