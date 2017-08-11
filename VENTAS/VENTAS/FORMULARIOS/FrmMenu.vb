@@ -381,18 +381,26 @@ Partial Public Class FrmMenu
     End Sub
 
     Private Sub BarButtonItem12_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem12.ItemClick
-        'Try
-        '    If FrmImportar_Excell.Detalle_Importacion.RowCount <> 0 Then
-        '        GridAExcel(FrmImportar_Excell.Detalle_Importacion)
-        '    Else
-        '        MessageBox.Show("Lo sentimos, aparentemente no existen datos que importar", "Modulo de Importacion & Exportacion de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '    End If
-        'Catch ex As Exception
-        'End Try
+        Try
+            If FrmImportar_Excell.Detalle_Importacion.RowCount <> 0 Then
+                GridAExcel(FrmImportar_Excell.Detalle_Importacion)
+            Else
+                MessageBox.Show("Lo sentimos, aparentemente no existen datos que importar", "Modulo de Importacion & Exportacion de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub BarButtonItem10_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem10.ItemClick
-        FrmWorking.ShowDialog()
+        Try
+            If FrmImportar_Excell.Detalle_Importacion.RowCount <> 0 Then
+                cargar_formulario(FrmWorking, 0)
+            Else
+                MessageBox.Show("Lo sentimos, aparentemente no existen datos que eliminar", "Modulo de Importacion & Exportacion de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+        End Try
+
     End Sub
 
     Private Sub BarButtonItem11_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem11.ItemClick

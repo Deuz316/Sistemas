@@ -2,7 +2,7 @@
 Imports Microsoft.Office.Interop
 Imports System.Data.SqlClient
 Module FUNCIONES
-    Dim server = "Data Source='192.168.10.2';Initial Catalog=Ventas;Persist Security Info=True;User ID=sa;Password=SO.DEBDC"
+    Dim server = "Data Source='192.168.10.223';Initial Catalog=Ventas;Persist Security Info=True;User ID=sa;Password=SO.DEBDC"
     Public conteo = 0
     Public maximo = 0
     Public Function gestionar_formularios(control1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, control2 As DevExpress.XtraEditors.PanelControl) As Boolean
