@@ -18,5 +18,6 @@
     Private Sub btnImportar_Click(sender As Object, e As EventArgs) Handles btnImportar.Click
         Importar_Doc(Me.ComboBoxEdit1.Text, FrmImportar_Excell.Detalle_Importacion)
         Cargar_Formularios(FrmMenu, FrmImportar_Excell)
+        MessageBox.Show("Datos Importados Exitosamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

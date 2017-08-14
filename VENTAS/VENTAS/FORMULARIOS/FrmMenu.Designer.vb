@@ -813,6 +813,7 @@
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2})
         Me.RibbonPage1.Name = "RibbonPage1"
         resources.ApplyResources(Me.RibbonPage1, "RibbonPage1")
+        Me.RibbonPage1.Visible = False
         '
         'RibbonPageGroup1
         '

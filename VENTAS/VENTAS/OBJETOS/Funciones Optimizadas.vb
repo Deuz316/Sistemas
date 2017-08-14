@@ -26,7 +26,7 @@ Module Funciones_Optimizadas
         Try
             Llenar_Datagridview = True
             Dim tb As New DataTable
-            Dim strSql As String = "select * from " + tabla + ""
+            Dim strSql As String = "select top 0 * from " + tabla + ""
             Using cnn As New SqlConnection(server)
                 cnn.Open()
                 Using dad As New SqlDataAdapter(strSql, cnn)
@@ -128,7 +128,6 @@ Module Funciones_Optimizadas
                 importar.DestinationTableName = "" + tabla + ""
                 importar.WriteToServer(ds.Tables(0))
                 cadenadestino.Close()
-                MessageBox.Show("Datos Importados Exitosamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         Catch ex As Exception
             Importar_Doc = False
