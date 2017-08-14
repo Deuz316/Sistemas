@@ -88,6 +88,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FORMULARIOS\CONFIGURACION\FrmOpciones.Designer.vb">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORMULARIOS\CONFIGURACION\FrmOpciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FORMULARIOS\FACTURACION\FrmClientes.Designer.vb">
       <DependentUpon>FrmClientes.vb</DependentUpon>
     </Compile>
@@ -163,9 +169,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OBJETOS\Funciones Optimizadas.vb" />
     <Compile Include="OBJETOS\Funciones.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FORMULARIOS\CONFIGURACION\FrmOpciones.resx">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORMULARIOS\FACTURACION\FrmClientes.resx">
       <DependentUpon>FrmClientes.vb</DependentUpon>
     </EmbeddedResource>

@@ -363,32 +363,31 @@ Partial Public Class FrmMenu
     End Sub
 
     Private Sub BarButtonItem5_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem5.ItemClick
-        cargar_formularios(Me, FrmImportar_Excell)
+        'cargar_formularios(Me, FrmImportar_Excell)
         RibbonPageGroup4.Visible = True
     End Sub
 
     Private Sub BarButtonItem7_ItemClick_1(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem7.ItemClick
-        Dim openFD As New OpenFileDialog()
-        With openFD
-            .Title = “Seleccionar archivos”
-            .Filter = “Archivos Excel(*.xls;*.xlsx)|*.xls;*xlsx|Todos los archivos(*.*)|*.*”
-            .Multiselect = False
-            .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
-            If .ShowDialog = Windows.Forms.DialogResult.OK Then
-                Importar_Excel_to_datagridview(.FileName, Obtener_Nombre_Hoja_Activa(.FileName), FrmImportar_Excell.Detalle_Importacion)
-            End If
-        End With
+        cargar_formulario(FrmOpciones, 0)
+        FrmOpciones.btnImportar.Visible = True
+        FrmOpciones.btnExportar.Visible = False
+        'Dim openFD As New OpenFileDialog()
+        'With openFD
+        '    .Title = “Seleccionar archivos”
+        '    .Filter = “Archivos Excel(*.xls;*.xlsx)|*.xls;*xlsx|Todos los archivos(*.*)|*.*”
+        '    .Multiselect = False
+        '    .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.Desktop
+        '    If .ShowDialog = Windows.Forms.DialogResult.OK Then
+        '        Importar_Excel_to_datagridview(.FileName, Obtener_Nombre_Hoja_Activa(.FileName), FrmImportar_Excell.Detalle_Importacion)
+        '    End If
+        'End With
     End Sub
 
     Private Sub BarButtonItem12_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem12.ItemClick
-        Try
-            If FrmImportar_Excell.Detalle_Importacion.RowCount <> 0 Then
-                GridAExcel(FrmImportar_Excell.Detalle_Importacion)
-            Else
-                MessageBox.Show("Lo sentimos, aparentemente no existen datos que importar", "Modulo de Importacion & Exportacion de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-        Catch ex As Exception
-        End Try
+        FrmImportar_Excell.Close()
+        cargar_formulario(FrmOpciones, 0)
+        FrmOpciones.btnImportar.Visible = False
+        FrmOpciones.btnExportar.Visible = True
     End Sub
 
     Private Sub BarButtonItem10_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem10.ItemClick

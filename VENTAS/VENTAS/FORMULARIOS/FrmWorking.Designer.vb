@@ -47,7 +47,7 @@ Partial Class FrmWorking
         '
         'btn_salir
         '
-        Me.btn_salir.Location = New System.Drawing.Point(201, 61)
+        Me.btn_salir.Location = New System.Drawing.Point(252, 61)
         Me.btn_salir.Name = "btn_salir"
         Me.btn_salir.Size = New System.Drawing.Size(75, 23)
         Me.btn_salir.TabIndex = 3

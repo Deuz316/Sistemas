@@ -2,7 +2,7 @@
 Imports Microsoft.Office.Interop
 Imports System.Data.SqlClient
 Module FUNCIONES
-    Dim server = "Data Source='192.168.10.223';Initial Catalog=Ventas;Persist Security Info=True;User ID=sa;Password=SO.DEBDC"
+    Public server = "Data Source='192.168.10.223';Initial Catalog=Ventas;Persist Security Info=True;User ID=sa;Password=SO.DEBDC"
     Public conteo = 0
     Public maximo = 0
     Public Function gestionar_formularios(control1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, control2 As DevExpress.XtraEditors.PanelControl) As Boolean
@@ -19,19 +19,19 @@ Module FUNCIONES
         End Try
         Return gestionar_formularios
     End Function
-    Public Function cargar_formularios(padre As Form, hijo As Form) As Boolean
+    Public Function Cargar_Formularios(padre As Form, hijo As Form) As Boolean
         Try
-            cargar_formularios = True
+            Cargar_Formularios = True
             With hijo
                 .MdiParent = padre
                 .Show()
                 .Focus()
             End With
         Catch ex As Exception
-            cargar_formularios = False
+            Cargar_Formularios = False
             MsgBox(ex.Message)
         End Try
-        Return cargar_formularios
+        Return Cargar_Formularios
     End Function
     Public Function cargar_formulario(formulario As Form, tipo As Integer) As Boolean
         Try
@@ -198,14 +198,5 @@ Module FUNCIONES
             MsgBox(ex.Message)
         End Try
         Return Recorrer_DGV
-    End Function
-
-    Public Function Llenar_combobox(control As DevExpress.XtraEditors.ComboBoxEdit) As Boolean
-        Try
-            Llenar_combobox = True
-
-        Catch ex As Exception
-            Llenar_combobox = False
-        End Try
     End Function
 End Module
