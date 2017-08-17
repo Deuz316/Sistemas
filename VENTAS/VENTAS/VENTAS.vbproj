@@ -148,10 +148,10 @@
     <Compile Include="FORMULARIOS\FrmPresentacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORMULARIOS\CONFIGURACION\FrmWorking.Designer.vb">
+    <Compile Include="FORMULARIOS\FrmWorking.Designer.vb">
       <DependentUpon>FrmWorking.vb</DependentUpon>
     </Compile>
-    <Compile Include="FORMULARIOS\CONFIGURACION\FrmWorking.vb">
+    <Compile Include="FORMULARIOS\FrmWorking.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -203,7 +203,7 @@
     <EmbeddedResource Include="FORMULARIOS\FrmPresentacion.resx">
       <DependentUpon>FrmPresentacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORMULARIOS\CONFIGURACION\FrmWorking.resx">
+    <EmbeddedResource Include="FORMULARIOS\FrmWorking.resx">
       <DependentUpon>FrmWorking.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />

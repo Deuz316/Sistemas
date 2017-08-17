@@ -7,7 +7,6 @@
         Cargar_Formularios(FrmMenu, FrmImportar_Excell)
         Llenar_Datagridview(Me.ComboBoxEdit1.EditValue, FrmImportar_Excell.Detalle_Importacion)
         Exportar_Doc(Me.ComboBoxEdit1.Text, FrmImportar_Excell.Detalle_Importacion)
-        FrmImportar_Excell.Close()
         Me.Close()
     End Sub
 
@@ -18,8 +17,7 @@
 
     Private Sub btnImportar_Click(sender As Object, e As EventArgs) Handles btnImportar.Click
         Importar_Doc(Me.ComboBoxEdit1.Text, FrmImportar_Excell.Detalle_Importacion)
-        Ejecutar_Procedure("SP_MIGRAR_INVENTARIO")
         Cargar_Formularios(FrmMenu, FrmImportar_Excell)
-        Me.Close()
+        MessageBox.Show("Datos Importados Exitosamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

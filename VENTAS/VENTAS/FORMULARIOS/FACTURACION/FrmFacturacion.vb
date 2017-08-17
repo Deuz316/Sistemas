@@ -1,7 +1,6 @@
 ﻿Public Class FrmFacturacion
     Private Sub FrmFacturacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FrmMenu.RibbonPageGroup2.Visible = True
-        txt_autocomplete("SELECT P.PRODUCTO + ' - ' +M.NOMBRE'PRODUCTO' FROM PRODUCTOS P INNER JOIN MARCA M ON P.MARCA = M.ID_MARCA", "PRODUCTO", txtbusqueda)
     End Sub
 
     Private Sub FrmFacturacion_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

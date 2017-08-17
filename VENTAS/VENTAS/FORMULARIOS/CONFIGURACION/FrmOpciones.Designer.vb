@@ -33,24 +33,23 @@ Partial Class FrmOpciones
         Me.ComboBoxEdit1.Location = New System.Drawing.Point(12, 12)
         Me.ComboBoxEdit1.Name = "ComboBoxEdit1"
         Me.ComboBoxEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.ComboBoxEdit1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.ComboBoxEdit1.Properties.NullValuePrompt = "Tables Of DataBase"
         Me.ComboBoxEdit1.Properties.NullValuePromptShowForEmptyValue = True
         Me.ComboBoxEdit1.Size = New System.Drawing.Size(406, 20)
-        Me.ComboBoxEdit1.TabIndex = 3
+        Me.ComboBoxEdit1.TabIndex = 1
         '
         'btnExportar
         '
-        Me.btnExportar.Location = New System.Drawing.Point(179, 38)
+        Me.btnExportar.Location = New System.Drawing.Point(186, 38)
         Me.btnExportar.Name = "btnExportar"
         Me.btnExportar.Size = New System.Drawing.Size(75, 23)
-        Me.btnExportar.TabIndex = 1
+        Me.btnExportar.TabIndex = 0
         Me.btnExportar.Text = "Exportar"
         Me.btnExportar.Visible = False
         '
         'btnImportar
         '
-        Me.btnImportar.Location = New System.Drawing.Point(179, 38)
+        Me.btnImportar.Location = New System.Drawing.Point(186, 38)
         Me.btnImportar.Name = "btnImportar"
         Me.btnImportar.Size = New System.Drawing.Size(75, 23)
         Me.btnImportar.TabIndex = 2
