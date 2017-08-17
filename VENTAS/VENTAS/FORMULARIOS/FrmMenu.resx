@@ -2521,13 +2521,13 @@
     <value>Combo</value>
   </data>
   <data name="ribbonControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1346, 146</value>
+    <value>1354, 146</value>
   </data>
   <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 750</value>
+    <value>0, 754</value>
   </data>
   <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1346, 21</value>
+    <value>1354, 21</value>
   </data>
   <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
     <value>ribbonStatusBar</value>
@@ -2566,7 +2566,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1346, 771</value>
+    <value>1354, 775</value>
   </data>
   <data name="viewSitePanel.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>White</value>
@@ -2579,7 +2579,7 @@
     <value>0, 146</value>
   </data>
   <data name="viewSitePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1346, 604</value>
+    <value>1354, 608</value>
   </data>
   <data name="viewSitePanel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>

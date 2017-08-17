@@ -1,8 +1,18 @@
 ﻿Public Class FrmWorking
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles btn_importar.Click
-        Recorrer_DGV(FrmImportar_Excell.Detalle_Importacion)
-        btn_salir.Visible = True
-        btn_importar.Visible = False
+        If cbo_opciones_importacion.Text = "Catalogo de Productos" Then
+            LabelControl2.Text = "Importando, favor esperar"
+            Recorrer_DGV(FrmImportar_Excell.Detalle_Importacion)
+            btn_salir.Visible = True
+            btn_importar.Visible = False
+        End If
+        If cbo_opciones_importacion.Text = "Historico de Ventas" Then
+
+        End If
+        If cbo_opciones_importacion.Text = "Historico de Importaciones" Then
+
+        End If
+        LabelControl2.Text = "Registro Importado Exitosamente"
     End Sub
 
     Private Sub FrmWorking_Load(sender As Object, e As EventArgs) Handles MyBase.Load

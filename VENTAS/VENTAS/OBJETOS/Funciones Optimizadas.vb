@@ -98,9 +98,9 @@ Module Funciones_Optimizadas
             Importar_Doc = True
             Dim myFileDialog As New OpenFileDialog()
             Dim xSheet As String = ""
+
             With myFileDialog
                 .Filter = “Archivos Excel(*.xls;*.xlsx)|*.xls;*xlsx|Todos los archivos(*.*)|*.*”
-                '.Filter = "Excel Files |*.xlsx"
                 .Title = "Open File"
                 .ShowDialog()
             End With
@@ -135,4 +135,29 @@ Module Funciones_Optimizadas
         End Try
         Return Importar_Doc
     End Function
+    Public Function Ejecutar_Procedure(procedure As String) As Boolean
+        Dim cmd As SqlCommand
+        Dim dr As SqlDataReader
+        Try
+            Ejecutar_Procedure = True
+            Using cnn As New SqlConnection(server)
+                cnn.Open()
+                cmd = New SqlCommand(procedure)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Connection = cnn
+                If cmd.ExecuteNonQuery Then
+                    Dim dt As New DataTable
+                    Dim da As New SqlDataAdapter(cmd)
+                    da.Fill(dt)
+                Else
+                    Return Nothing
+                End If
+                cnn.Close()
+            End Using
+        Catch ex As Exception
+            Ejecutar_Procedure = False
+            MsgBox(ex.Message)
+        End Try
+    End Function
+
 End Module

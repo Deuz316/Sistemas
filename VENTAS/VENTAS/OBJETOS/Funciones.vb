@@ -106,26 +106,26 @@ Module FUNCIONES
         End Try
         Return Importar_Excel_to_datagridview
     End Function
-    Public Function Obtener_Nombre_Hoja_Activa(ByVal rutaLibro As String) As String
-        Dim app As Excel.Application = Nothing
-        Try
-            app = New Excel.Application()
-            Dim wb As Excel.Workbook = app.Workbooks.Open(rutaLibro)
-            Dim ws As Excel.Worksheet = CType(wb.Worksheets.Item(1), Excel.Worksheet)
-            Dim name As String = ws.Name
-            ws = Nothing
-            wb.Close()
-            wb = Nothing
-            Return name
-        Catch ex As Exception
-            Throw
-        Finally
-            If (Not app Is Nothing) Then _
-                app.Quit()
-            Runtime.InteropServices.Marshal.ReleaseComObject(app)
-            app = Nothing
-        End Try
-    End Function
+    'Public Function Obtener_Nombre_Hoja_Activa(ByVal rutaLibro As String) As String
+    '    Dim app As Excel.Application = Nothing
+    '    Try
+    '        app = New Excel.Application()
+    '        Dim wb As Excel.Workbook = app.Workbooks.Open(rutaLibro)
+    '        Dim ws As Excel.Worksheet = CType(wb.Worksheets.Item(1), Excel.Worksheet)
+    '        Dim name As String = ws.Name
+    '        ws = Nothing
+    '        wb.Close()
+    '        wb = Nothing
+    '        Return name
+    '    Catch ex As Exception
+    '        Throw
+    '    Finally
+    '        If (Not app Is Nothing) Then _
+    '            app.Quit()
+    '        Runtime.InteropServices.Marshal.ReleaseComObject(app)
+    '        app = Nothing
+    '    End Try
+    'End Function
     Public Function GridAExcel(ByVal ElGrid As DataGridView) As Boolean
         Dim exApp As New Microsoft.Office.Interop.Excel.Application
         Dim exLibro As Microsoft.Office.Interop.Excel.Workbook
