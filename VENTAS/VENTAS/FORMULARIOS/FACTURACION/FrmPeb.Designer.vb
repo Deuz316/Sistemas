@@ -55,19 +55,13 @@ Partial Class FrmPeb
         Dim SuperToolTip11 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem11 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem11 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPeb))
         Dim SuperToolTip12 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem12 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem12 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Dim SuperToolTip13 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem13 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem13 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPeb))
-        Dim SuperToolTip14 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem14 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem14 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip15 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem15 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem15 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.SeparatorControl3 = New DevExpress.XtraEditors.SeparatorControl()
         Me.SeparatorControl2 = New DevExpress.XtraEditors.SeparatorControl()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
@@ -79,19 +73,10 @@ Partial Class FrmPeb
         Me.LabelControl13 = New DevExpress.XtraEditors.LabelControl()
         Me.txtimpuesto = New DevExpress.XtraEditors.SpinEdit()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.LabelControl8 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
-        Me.SpinEdit2 = New DevExpress.XtraEditors.SpinEdit()
-        Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
-        Me.SpinEdit1 = New DevExpress.XtraEditors.SpinEdit()
-        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
-        Me.SpinEdit3 = New DevExpress.XtraEditors.SpinEdit()
-        Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl12 = New DevExpress.XtraEditors.LabelControl()
-        Me.SpinEdit4 = New DevExpress.XtraEditors.SpinEdit()
-        Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtcosto = New DevExpress.XtraEditors.SpinEdit()
+        Me.txtprecio = New DevExpress.XtraEditors.SpinEdit()
+        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
         Me.txtmarca = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
@@ -112,11 +97,8 @@ Partial Class FrmPeb
         CType(Me.txtdescuento.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtimpuesto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.SpinEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpinEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.SpinEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpinEdit4.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtcosto.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtprecio.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtmarca.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtdescripcion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCodigo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,7 +124,7 @@ Partial Class FrmPeb
         '
         'LabelControl1
         '
-        Me.LabelControl1.Location = New System.Drawing.Point(564, 134)
+        Me.LabelControl1.Location = New System.Drawing.Point(195, 19)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(77, 13)
         Me.LabelControl1.TabIndex = 50
@@ -153,7 +135,7 @@ Partial Class FrmPeb
         Me.txtfactor.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
         Me.txtfactor.Enabled = False
         Me.txtfactor.EnterMoveNextControl = True
-        Me.txtfactor.Location = New System.Drawing.Point(564, 153)
+        Me.txtfactor.Location = New System.Drawing.Point(195, 38)
         Me.txtfactor.Name = "txtfactor"
         Me.txtfactor.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.txtfactor.Size = New System.Drawing.Size(80, 20)
@@ -250,77 +232,61 @@ Partial Class FrmPeb
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.LabelControl8)
-        Me.GroupBox1.Controls.Add(Me.LabelControl7)
-        Me.GroupBox1.Controls.Add(Me.SpinEdit2)
-        Me.GroupBox1.Controls.Add(Me.LabelControl6)
-        Me.GroupBox1.Controls.Add(Me.SpinEdit1)
+        Me.GroupBox1.Controls.Add(Me.LabelControl12)
+        Me.GroupBox1.Controls.Add(Me.txtcosto)
+        Me.GroupBox1.Controls.Add(Me.LabelControl1)
+        Me.GroupBox1.Controls.Add(Me.txtprecio)
+        Me.GroupBox1.Controls.Add(Me.txtfactor)
         Me.GroupBox1.Controls.Add(Me.LabelControl5)
         Me.GroupBox1.Location = New System.Drawing.Point(265, 186)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(192, 125)
+        Me.GroupBox1.Size = New System.Drawing.Size(390, 125)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
         '
-        'LabelControl8
+        'LabelControl12
         '
-        Me.LabelControl8.Location = New System.Drawing.Point(12, 90)
-        Me.LabelControl8.Name = "LabelControl8"
-        Me.LabelControl8.Size = New System.Drawing.Size(13, 13)
-        Me.LabelControl8.TabIndex = 23
-        Me.LabelControl8.Text = "C$"
+        Me.LabelControl12.Location = New System.Drawing.Point(6, 64)
+        Me.LabelControl12.Name = "LabelControl12"
+        Me.LabelControl12.Size = New System.Drawing.Size(29, 13)
+        Me.LabelControl12.TabIndex = 24
+        Me.LabelControl12.Text = "&Precio"
         '
-        'LabelControl7
+        'txtcosto
         '
-        Me.LabelControl7.Location = New System.Drawing.Point(12, 41)
-        Me.LabelControl7.Name = "LabelControl7"
-        Me.LabelControl7.Size = New System.Drawing.Size(13, 13)
-        Me.LabelControl7.TabIndex = 22
-        Me.LabelControl7.Text = "C$"
-        '
-        'SpinEdit2
-        '
-        Me.SpinEdit2.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.SpinEdit2.Enabled = False
-        Me.SpinEdit2.EnterMoveNextControl = True
-        Me.SpinEdit2.Location = New System.Drawing.Point(31, 87)
-        Me.SpinEdit2.Name = "SpinEdit2"
-        Me.SpinEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SpinEdit2.Size = New System.Drawing.Size(150, 20)
+        Me.txtcosto.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtcosto.EnterMoveNextControl = True
+        Me.txtcosto.Location = New System.Drawing.Point(31, 38)
+        Me.txtcosto.Name = "txtcosto"
+        Me.txtcosto.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtcosto.Properties.Mask.EditMask = "n"
+        Me.txtcosto.Size = New System.Drawing.Size(150, 20)
         ToolTipTitleItem6.Text = "Facturacion"
         ToolTipItem6.LeftIndent = 6
-        ToolTipItem6.Text = "Precio C$"
+        ToolTipItem6.Text = "Costo C$"
         SuperToolTip6.Items.Add(ToolTipTitleItem6)
         SuperToolTip6.Items.Add(ToolTipItem6)
-        Me.SpinEdit2.SuperTip = SuperToolTip6
-        Me.SpinEdit2.TabIndex = 9
-        Me.SpinEdit2.ToolTip = "Precio C$"
+        Me.txtcosto.SuperTip = SuperToolTip6
+        Me.txtcosto.TabIndex = 8
+        Me.txtcosto.ToolTip = "Costo C$"
         '
-        'LabelControl6
+        'txtprecio
         '
-        Me.LabelControl6.Location = New System.Drawing.Point(6, 68)
-        Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(29, 13)
-        Me.LabelControl6.TabIndex = 20
-        Me.LabelControl6.Text = "&Precio"
-        '
-        'SpinEdit1
-        '
-        Me.SpinEdit1.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.SpinEdit1.Enabled = False
-        Me.SpinEdit1.EnterMoveNextControl = True
-        Me.SpinEdit1.Location = New System.Drawing.Point(31, 38)
-        Me.SpinEdit1.Name = "SpinEdit1"
-        Me.SpinEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SpinEdit1.Size = New System.Drawing.Size(150, 20)
+        Me.txtprecio.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.txtprecio.EnterMoveNextControl = True
+        Me.txtprecio.Location = New System.Drawing.Point(31, 83)
+        Me.txtprecio.Name = "txtprecio"
+        Me.txtprecio.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtprecio.Properties.Mask.EditMask = "n"
+        Me.txtprecio.Size = New System.Drawing.Size(150, 20)
         ToolTipTitleItem7.Text = "Facturacion"
         ToolTipItem7.LeftIndent = 6
-        ToolTipItem7.Text = "Costo C$"
+        ToolTipItem7.Text = "Costo U$"
         SuperToolTip7.Items.Add(ToolTipTitleItem7)
         SuperToolTip7.Items.Add(ToolTipItem7)
-        Me.SpinEdit1.SuperTip = SuperToolTip7
-        Me.SpinEdit1.TabIndex = 8
-        Me.SpinEdit1.ToolTip = "Costo C$"
+        Me.txtprecio.SuperTip = SuperToolTip7
+        Me.txtprecio.TabIndex = 11
+        Me.txtprecio.ToolTip = "Costo U$"
         '
         'LabelControl5
         '
@@ -329,88 +295,6 @@ Partial Class FrmPeb
         Me.LabelControl5.Size = New System.Drawing.Size(28, 13)
         Me.LabelControl5.TabIndex = 18
         Me.LabelControl5.Text = "&Costo"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.LabelControl9)
-        Me.GroupBox2.Controls.Add(Me.SpinEdit3)
-        Me.GroupBox2.Controls.Add(Me.LabelControl10)
-        Me.GroupBox2.Controls.Add(Me.LabelControl12)
-        Me.GroupBox2.Controls.Add(Me.SpinEdit4)
-        Me.GroupBox2.Controls.Add(Me.LabelControl11)
-        Me.GroupBox2.Location = New System.Drawing.Point(463, 186)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(192, 125)
-        Me.GroupBox2.TabIndex = 39
-        Me.GroupBox2.TabStop = False
-        '
-        'LabelControl9
-        '
-        Me.LabelControl9.Location = New System.Drawing.Point(12, 90)
-        Me.LabelControl9.Name = "LabelControl9"
-        Me.LabelControl9.Size = New System.Drawing.Size(13, 13)
-        Me.LabelControl9.TabIndex = 29
-        Me.LabelControl9.Text = "U$"
-        '
-        'SpinEdit3
-        '
-        Me.SpinEdit3.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.SpinEdit3.Enabled = False
-        Me.SpinEdit3.EnterMoveNextControl = True
-        Me.SpinEdit3.Location = New System.Drawing.Point(31, 87)
-        Me.SpinEdit3.Name = "SpinEdit3"
-        Me.SpinEdit3.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SpinEdit3.Size = New System.Drawing.Size(150, 20)
-        ToolTipTitleItem8.Text = "Facturacion"
-        ToolTipItem8.LeftIndent = 6
-        ToolTipItem8.Text = "U$"
-        SuperToolTip8.Items.Add(ToolTipTitleItem8)
-        SuperToolTip8.Items.Add(ToolTipItem8)
-        Me.SpinEdit3.SuperTip = SuperToolTip8
-        Me.SpinEdit3.TabIndex = 12
-        Me.SpinEdit3.ToolTip = "Precio U$"
-        '
-        'LabelControl10
-        '
-        Me.LabelControl10.Location = New System.Drawing.Point(12, 41)
-        Me.LabelControl10.Name = "LabelControl10"
-        Me.LabelControl10.Size = New System.Drawing.Size(13, 13)
-        Me.LabelControl10.TabIndex = 28
-        Me.LabelControl10.Text = "U$"
-        '
-        'LabelControl12
-        '
-        Me.LabelControl12.Location = New System.Drawing.Point(6, 19)
-        Me.LabelControl12.Name = "LabelControl12"
-        Me.LabelControl12.Size = New System.Drawing.Size(28, 13)
-        Me.LabelControl12.TabIndex = 24
-        Me.LabelControl12.Text = "&Costo"
-        '
-        'SpinEdit4
-        '
-        Me.SpinEdit4.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.SpinEdit4.Enabled = False
-        Me.SpinEdit4.EnterMoveNextControl = True
-        Me.SpinEdit4.Location = New System.Drawing.Point(31, 38)
-        Me.SpinEdit4.Name = "SpinEdit4"
-        Me.SpinEdit4.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SpinEdit4.Size = New System.Drawing.Size(150, 20)
-        ToolTipTitleItem9.Text = "Facturacion"
-        ToolTipItem9.LeftIndent = 6
-        ToolTipItem9.Text = "Costo U$"
-        SuperToolTip9.Items.Add(ToolTipTitleItem9)
-        SuperToolTip9.Items.Add(ToolTipItem9)
-        Me.SpinEdit4.SuperTip = SuperToolTip9
-        Me.SpinEdit4.TabIndex = 11
-        Me.SpinEdit4.ToolTip = "Costo U$"
-        '
-        'LabelControl11
-        '
-        Me.LabelControl11.Location = New System.Drawing.Point(6, 68)
-        Me.LabelControl11.Name = "LabelControl11"
-        Me.LabelControl11.Size = New System.Drawing.Size(29, 13)
-        Me.LabelControl11.TabIndex = 26
-        Me.LabelControl11.Text = "&Precio"
         '
         'LabelControl4
         '
@@ -427,12 +311,12 @@ Partial Class FrmPeb
         Me.txtmarca.Name = "txtmarca"
         Me.txtmarca.Properties.NullValuePrompt = "Marca"
         Me.txtmarca.Size = New System.Drawing.Size(195, 20)
-        ToolTipTitleItem10.Text = "Facturacion"
-        ToolTipItem10.LeftIndent = 6
-        ToolTipItem10.Text = "Marca"
-        SuperToolTip10.Items.Add(ToolTipTitleItem10)
-        SuperToolTip10.Items.Add(ToolTipItem10)
-        Me.txtmarca.SuperTip = SuperToolTip10
+        ToolTipTitleItem8.Text = "Facturacion"
+        ToolTipItem8.LeftIndent = 6
+        ToolTipItem8.Text = "Marca"
+        SuperToolTip8.Items.Add(ToolTipTitleItem8)
+        SuperToolTip8.Items.Add(ToolTipItem8)
+        Me.txtmarca.SuperTip = SuperToolTip8
         Me.txtmarca.TabIndex = 33
         Me.txtmarca.ToolTip = "Marca"
         '
@@ -451,12 +335,12 @@ Partial Class FrmPeb
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.Properties.NullValuePrompt = "Producto"
         Me.txtdescripcion.Size = New System.Drawing.Size(390, 20)
-        ToolTipTitleItem11.Text = "Facturacion"
-        ToolTipItem11.LeftIndent = 6
-        ToolTipItem11.Text = "Producto"
-        SuperToolTip11.Items.Add(ToolTipTitleItem11)
-        SuperToolTip11.Items.Add(ToolTipItem11)
-        Me.txtdescripcion.SuperTip = SuperToolTip11
+        ToolTipTitleItem9.Text = "Facturacion"
+        ToolTipItem9.LeftIndent = 6
+        ToolTipItem9.Text = "Producto"
+        SuperToolTip9.Items.Add(ToolTipTitleItem9)
+        SuperToolTip9.Items.Add(ToolTipItem9)
+        Me.txtdescripcion.SuperTip = SuperToolTip9
         Me.txtdescripcion.TabIndex = 32
         Me.txtdescripcion.ToolTip = "Producto"
         '
@@ -475,12 +359,12 @@ Partial Class FrmPeb
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.Properties.NullValuePrompt = "Codigo"
         Me.txtCodigo.Size = New System.Drawing.Size(189, 20)
-        ToolTipTitleItem12.Text = "Facturacion"
-        ToolTipItem12.LeftIndent = 6
-        ToolTipItem12.Text = "Codigo"
-        SuperToolTip12.Items.Add(ToolTipTitleItem12)
-        SuperToolTip12.Items.Add(ToolTipItem12)
-        Me.txtCodigo.SuperTip = SuperToolTip12
+        ToolTipTitleItem10.Text = "Facturacion"
+        ToolTipItem10.LeftIndent = 6
+        ToolTipItem10.Text = "Codigo"
+        SuperToolTip10.Items.Add(ToolTipTitleItem10)
+        SuperToolTip10.Items.Add(ToolTipItem10)
+        Me.txtCodigo.SuperTip = SuperToolTip10
         Me.txtCodigo.TabIndex = 31
         Me.txtCodigo.ToolTip = "Codigo"
         '
@@ -496,12 +380,15 @@ Partial Class FrmPeb
         '
         Me.detalle_bodega.AllowUserToAddRows = False
         Me.detalle_bodega.AllowUserToDeleteRows = False
+        Me.detalle_bodega.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.detalle_bodega.BackgroundColor = System.Drawing.SystemColors.Info
         Me.detalle_bodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.detalle_bodega.GridColor = System.Drawing.SystemColors.Info
         Me.detalle_bodega.Location = New System.Drawing.Point(17, 346)
         Me.detalle_bodega.Name = "detalle_bodega"
         Me.detalle_bodega.ReadOnly = True
+        Me.detalle_bodega.RowHeadersVisible = False
+        Me.detalle_bodega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.detalle_bodega.Size = New System.Drawing.Size(638, 180)
         Me.detalle_bodega.TabIndex = 41
         '
@@ -511,13 +398,13 @@ Partial Class FrmPeb
         Me.PictureEdit1.Name = "PictureEdit1"
         Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
         Me.PictureEdit1.Size = New System.Drawing.Size(218, 225)
-        ToolTipTitleItem13.Text = "Facturacion"
-        ToolTipItem13.LeftIndent = 6
-        ToolTipItem13.Text = "Imagen Producto"
-        SuperToolTip13.Items.Add(ToolTipTitleItem13)
-        SuperToolTip13.Items.Add(ToolTipItem13)
-        Me.PictureEdit1.SuperTip = SuperToolTip13
-        Me.PictureEdit1.TabIndex = 48
+        ToolTipTitleItem11.Text = "Facturacion"
+        ToolTipItem11.LeftIndent = 6
+        ToolTipItem11.Text = "Imagen Producto"
+        SuperToolTip11.Items.Add(ToolTipTitleItem11)
+        SuperToolTip11.Items.Add(ToolTipItem11)
+        Me.PictureEdit1.SuperTip = SuperToolTip11
+        Me.PictureEdit1.TabIndex = 30
         Me.PictureEdit1.ToolTip = "Imagen del Producto"
         '
         'btn_salir
@@ -526,12 +413,12 @@ Partial Class FrmPeb
         Me.btn_salir.Location = New System.Drawing.Point(499, 561)
         Me.btn_salir.Name = "btn_salir"
         Me.btn_salir.Size = New System.Drawing.Size(75, 23)
-        ToolTipTitleItem14.Text = "Facturacion"
-        ToolTipItem14.LeftIndent = 6
-        ToolTipItem14.Text = "Salir"
-        SuperToolTip14.Items.Add(ToolTipTitleItem14)
-        SuperToolTip14.Items.Add(ToolTipItem14)
-        Me.btn_salir.SuperTip = SuperToolTip14
+        ToolTipTitleItem12.Text = "Facturacion"
+        ToolTipItem12.LeftIndent = 6
+        ToolTipItem12.Text = "Salir"
+        SuperToolTip12.Items.Add(ToolTipTitleItem12)
+        SuperToolTip12.Items.Add(ToolTipItem12)
+        Me.btn_salir.SuperTip = SuperToolTip12
         Me.btn_salir.TabIndex = 43
         Me.btn_salir.Text = "Salir"
         Me.btn_salir.ToolTip = "Cerrar Ventana"
@@ -542,12 +429,12 @@ Partial Class FrmPeb
         Me.SimpleButton1.Location = New System.Drawing.Point(580, 561)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(75, 23)
-        ToolTipTitleItem15.Text = "Facturacion"
-        ToolTipItem15.LeftIndent = 6
-        ToolTipItem15.Text = "Agregar"
-        SuperToolTip15.Items.Add(ToolTipTitleItem15)
-        SuperToolTip15.Items.Add(ToolTipItem15)
-        Me.SimpleButton1.SuperTip = SuperToolTip15
+        ToolTipTitleItem13.Text = "Facturacion"
+        ToolTipItem13.LeftIndent = 6
+        ToolTipItem13.Text = "Agregar"
+        SuperToolTip13.Items.Add(ToolTipTitleItem13)
+        SuperToolTip13.Items.Add(ToolTipItem13)
+        Me.SimpleButton1.SuperTip = SuperToolTip13
         Me.SimpleButton1.TabIndex = 45
         Me.SimpleButton1.Text = "Agregar"
         Me.SimpleButton1.ToolTip = "Agregar Producto"
@@ -566,8 +453,6 @@ Partial Class FrmPeb
         Me.ClientSize = New System.Drawing.Size(672, 596)
         Me.Controls.Add(Me.SeparatorControl3)
         Me.Controls.Add(Me.SeparatorControl2)
-        Me.Controls.Add(Me.LabelControl1)
-        Me.Controls.Add(Me.txtfactor)
         Me.Controls.Add(Me.CheckEdit2)
         Me.Controls.Add(Me.CheckEdit1)
         Me.Controls.Add(Me.LabelControl14)
@@ -575,7 +460,6 @@ Partial Class FrmPeb
         Me.Controls.Add(Me.LabelControl13)
         Me.Controls.Add(Me.txtimpuesto)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.LabelControl4)
         Me.Controls.Add(Me.txtmarca)
         Me.Controls.Add(Me.LabelControl3)
@@ -600,12 +484,8 @@ Partial Class FrmPeb
         CType(Me.txtimpuesto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.SpinEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpinEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.SpinEdit3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpinEdit4.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtcosto.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtprecio.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtmarca.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtdescripcion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCodigo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -629,19 +509,10 @@ Partial Class FrmPeb
     Friend WithEvents LabelControl13 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtimpuesto As DevExpress.XtraEditors.SpinEdit
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents LabelControl8 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents LabelControl7 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents SpinEdit2 As DevExpress.XtraEditors.SpinEdit
-    Friend WithEvents LabelControl6 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents SpinEdit1 As DevExpress.XtraEditors.SpinEdit
+    Friend WithEvents txtcosto As DevExpress.XtraEditors.SpinEdit
     Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents LabelControl9 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents SpinEdit3 As DevExpress.XtraEditors.SpinEdit
-    Friend WithEvents LabelControl10 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl12 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents SpinEdit4 As DevExpress.XtraEditors.SpinEdit
-    Friend WithEvents LabelControl11 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtprecio As DevExpress.XtraEditors.SpinEdit
     Friend WithEvents LabelControl4 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtmarca As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl

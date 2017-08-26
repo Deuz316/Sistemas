@@ -23,9 +23,6 @@ Partial Class FrmFacturacion
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFacturacion))
-        Dim SuperToolTip6 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem6 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem6 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
@@ -38,8 +35,10 @@ Partial Class FrmFacturacion
         Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip5 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem5 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem5 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.detalle_facturacion = New System.Windows.Forms.GroupBox()
-        Me.detalle_busqueda = New System.Windows.Forms.DataGridView()
         Me.btn_buscar = New DevExpress.XtraEditors.SimpleButton()
         Me.detalle_factura = New System.Windows.Forms.DataGridView()
         Me.c_cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -79,7 +78,6 @@ Partial Class FrmFacturacion
         Me.txttelefono = New DevExpress.XtraEditors.TextEdit()
         Me.txtidentificacion = New DevExpress.XtraEditors.TextEdit()
         Me.detalle_facturacion.SuspendLayout()
-        CType(Me.detalle_busqueda, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.detalle_factura, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtbusqueda.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.detalle_total.SuspendLayout()
@@ -103,7 +101,6 @@ Partial Class FrmFacturacion
         Me.detalle_facturacion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.detalle_facturacion.Controls.Add(Me.detalle_busqueda)
         Me.detalle_facturacion.Controls.Add(Me.btn_buscar)
         Me.detalle_facturacion.Controls.Add(Me.detalle_factura)
         Me.detalle_facturacion.Controls.Add(Me.txtbusqueda)
@@ -113,24 +110,6 @@ Partial Class FrmFacturacion
         Me.detalle_facturacion.Size = New System.Drawing.Size(402, 538)
         Me.detalle_facturacion.TabIndex = 7
         Me.detalle_facturacion.TabStop = False
-        '
-        'detalle_busqueda
-        '
-        Me.detalle_busqueda.AllowUserToAddRows = False
-        Me.detalle_busqueda.AllowUserToDeleteRows = False
-        Me.detalle_busqueda.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.detalle_busqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.detalle_busqueda.BackgroundColor = System.Drawing.SystemColors.Info
-        Me.detalle_busqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.detalle_busqueda.GridColor = System.Drawing.SystemColors.Info
-        Me.detalle_busqueda.Location = New System.Drawing.Point(6, 64)
-        Me.detalle_busqueda.Name = "detalle_busqueda"
-        Me.detalle_busqueda.ReadOnly = True
-        Me.detalle_busqueda.RowHeadersVisible = False
-        Me.detalle_busqueda.Size = New System.Drawing.Size(390, 468)
-        Me.detalle_busqueda.TabIndex = 6
         '
         'btn_buscar
         '
@@ -227,12 +206,12 @@ Partial Class FrmFacturacion
         Me.txtbusqueda.Properties.NullValuePrompt = "Busqueda Producto"
         Me.txtbusqueda.Properties.NullValuePromptShowForEmptyValue = True
         Me.txtbusqueda.Size = New System.Drawing.Size(309, 20)
-        ToolTipTitleItem6.Text = "Facturacion"
-        ToolTipItem6.LeftIndent = 6
-        ToolTipItem6.Text = "Busqueda de Producto"
-        SuperToolTip6.Items.Add(ToolTipTitleItem6)
-        SuperToolTip6.Items.Add(ToolTipItem6)
-        Me.txtbusqueda.SuperTip = SuperToolTip6
+        ToolTipTitleItem1.Text = "Facturacion"
+        ToolTipItem1.LeftIndent = 6
+        ToolTipItem1.Text = "Busqueda de Producto"
+        SuperToolTip1.Items.Add(ToolTipTitleItem1)
+        SuperToolTip1.Items.Add(ToolTipItem1)
+        Me.txtbusqueda.SuperTip = SuperToolTip1
         Me.txtbusqueda.TabIndex = 2
         '
         'LabelControl1
@@ -481,12 +460,12 @@ Partial Class FrmFacturacion
         Me.TextEdit1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextEdit1.Properties.NullValuePrompt = "Cliente"
         Me.TextEdit1.Size = New System.Drawing.Size(289, 20)
-        ToolTipTitleItem1.Text = "Facturacion"
-        ToolTipItem1.LeftIndent = 6
-        ToolTipItem1.Text = "Nombre del Cliente"
-        SuperToolTip1.Items.Add(ToolTipTitleItem1)
-        SuperToolTip1.Items.Add(ToolTipItem1)
-        Me.TextEdit1.SuperTip = SuperToolTip1
+        ToolTipTitleItem2.Text = "Facturacion"
+        ToolTipItem2.LeftIndent = 6
+        ToolTipItem2.Text = "Nombre del Cliente"
+        SuperToolTip2.Items.Add(ToolTipTitleItem2)
+        SuperToolTip2.Items.Add(ToolTipItem2)
+        Me.TextEdit1.SuperTip = SuperToolTip2
         Me.TextEdit1.TabIndex = 11
         '
         'txtcorreo
@@ -499,12 +478,12 @@ Partial Class FrmFacturacion
         Me.txtcorreo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtcorreo.Properties.NullValuePrompt = "Correo"
         Me.txtcorreo.Size = New System.Drawing.Size(289, 20)
-        ToolTipTitleItem2.Text = "Facturacion"
-        ToolTipItem2.LeftIndent = 6
-        ToolTipItem2.Text = "Correo Electronico"
-        SuperToolTip2.Items.Add(ToolTipTitleItem2)
-        SuperToolTip2.Items.Add(ToolTipItem2)
-        Me.txtcorreo.SuperTip = SuperToolTip2
+        ToolTipTitleItem3.Text = "Facturacion"
+        ToolTipItem3.LeftIndent = 6
+        ToolTipItem3.Text = "Correo Electronico"
+        SuperToolTip3.Items.Add(ToolTipTitleItem3)
+        SuperToolTip3.Items.Add(ToolTipItem3)
+        Me.txtcorreo.SuperTip = SuperToolTip3
         Me.txtcorreo.TabIndex = 14
         '
         'txttelefono
@@ -517,12 +496,12 @@ Partial Class FrmFacturacion
         Me.txttelefono.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txttelefono.Properties.NullValuePrompt = "Teléfono"
         Me.txttelefono.Size = New System.Drawing.Size(157, 20)
-        ToolTipTitleItem3.Text = "Facturacion"
-        ToolTipItem3.LeftIndent = 6
-        ToolTipItem3.Text = "Telefono Convencional o Celular"
-        SuperToolTip3.Items.Add(ToolTipTitleItem3)
-        SuperToolTip3.Items.Add(ToolTipItem3)
-        Me.txttelefono.SuperTip = SuperToolTip3
+        ToolTipTitleItem4.Text = "Facturacion"
+        ToolTipItem4.LeftIndent = 6
+        ToolTipItem4.Text = "Telefono Convencional o Celular"
+        SuperToolTip4.Items.Add(ToolTipTitleItem4)
+        SuperToolTip4.Items.Add(ToolTipItem4)
+        Me.txttelefono.SuperTip = SuperToolTip4
         Me.txttelefono.TabIndex = 13
         '
         'txtidentificacion
@@ -535,12 +514,12 @@ Partial Class FrmFacturacion
         Me.txtidentificacion.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtidentificacion.Properties.NullValuePrompt = "Identificación"
         Me.txtidentificacion.Size = New System.Drawing.Size(289, 20)
-        ToolTipTitleItem4.Text = "Facturacion"
-        ToolTipItem4.LeftIndent = 6
-        ToolTipItem4.Text = "RUC o Cedula"
-        SuperToolTip4.Items.Add(ToolTipTitleItem4)
-        SuperToolTip4.Items.Add(ToolTipItem4)
-        Me.txtidentificacion.SuperTip = SuperToolTip4
+        ToolTipTitleItem5.Text = "Facturacion"
+        ToolTipItem5.LeftIndent = 6
+        ToolTipItem5.Text = "RUC o Cedula"
+        SuperToolTip5.Items.Add(ToolTipTitleItem5)
+        SuperToolTip5.Items.Add(ToolTipItem5)
+        Me.txtidentificacion.SuperTip = SuperToolTip5
         Me.txtidentificacion.TabIndex = 12
         '
         'FrmFacturacion
@@ -558,7 +537,6 @@ Partial Class FrmFacturacion
         Me.Text = "Facturacion"
         Me.detalle_facturacion.ResumeLayout(False)
         Me.detalle_facturacion.PerformLayout()
-        CType(Me.detalle_busqueda, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.detalle_factura, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtbusqueda.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.detalle_total.ResumeLayout(False)
@@ -582,7 +560,6 @@ Partial Class FrmFacturacion
     End Sub
 
     Friend WithEvents detalle_facturacion As GroupBox
-    Friend WithEvents detalle_busqueda As DataGridView
     Friend WithEvents btn_buscar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents detalle_factura As DataGridView
     Friend WithEvents c_cantidad As DataGridViewTextBoxColumn

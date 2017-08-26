@@ -1,6 +1,7 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.SqlClient
+Imports System.Data.OleDb
 Imports Microsoft.Office.Interop
-Imports System.Data.SqlClient
+Imports System.Math
 Module FUNCIONES
     Public server = "Data Source='192.168.10.223';Initial Catalog=Ventas;Persist Security Info=True;User ID=sa;Password=SO.DEBDC"
     Public conteo = 0
@@ -159,6 +160,7 @@ Module FUNCIONES
     Public Function Recorrer_DGV(grid As DataGridView) As Boolean
         Try
             Recorrer_DGV = True
+            FrmWorking.LabelControl2.Text = "Importando, favor esperar"
             Using cnn = New SqlConnection(server)
                 cnn.Open()
                 Dim sql As String = "INSERT MIGRAR_INVENTARIO VALUES(@BODEGA,@CODIGO,@CODIGO_BARRA,@PRODUCTO,@MARCA,@CATEGORIA,@TIPO,@UDM,@FOB,@CIF,@PRECIO,@EXISTENCIAS,@RACK,@COLUMNA,@FILA,@MINIMO,@MAXIMO,@CLASIFICACION,@SERVICIO,@IMPUESTO,@ACTIVO,@LOCAL)"
@@ -198,5 +200,216 @@ Module FUNCIONES
             MsgBox(ex.Message)
         End Try
         Return Recorrer_DGV
+    End Function
+    Public Function Llenar_Combobox(query As String, campo As String, cbo As DevExpress.XtraEditors.ComboBoxEdit) As Boolean
+        Try
+            Llenar_Combobox = True
+            Using cnn As New SqlConnection(server)
+                cnn.Open()
+                Dim enunciado = New SqlCommand(query, cnn)
+                Dim respuesta As SqlDataReader
+                respuesta = enunciado.ExecuteReader
+                While respuesta.Read
+                    cbo.Properties.Items.Add(respuesta.Item(campo))
+                End While
+                respuesta.Close()
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Llenar_Combobox = False
+        End Try
+        Return Llenar_Combobox
+    End Function
+    Public Function Llenar_Datagridview(ByVal tabla As String, grid As DataGridView) As Boolean
+        Try
+            Llenar_Datagridview = True
+            Dim tb As New DataTable
+            Dim strSql As String = "select top 0 * from " + tabla + ""
+            Using cnn As New SqlConnection(server)
+                cnn.Open()
+                Using dad As New SqlDataAdapter(strSql, cnn)
+                    dad.Fill(tb)
+                End Using
+                cnn.Close()
+            End Using
+            grid.DataSource = tb
+        Catch ex As Exception
+            Llenar_Datagridview = False
+            MsgBox(ex.Message)
+        End Try
+        Return Llenar_Datagridview
+    End Function
+    Public Function Exportar_Doc(tabla As String, grid As DataGridView)
+        Try
+            Exportar_Doc = True
+            Dim app As Microsoft.Office.Interop.Excel._Application = New Microsoft.Office.Interop.Excel.Application()
+            Dim workbook As Microsoft.Office.Interop.Excel._Workbook = app.Workbooks.Add(Type.Missing)
+            Dim worksheet As Microsoft.Office.Interop.Excel._Worksheet = Nothing
+            worksheet = workbook.Sheets("Hoja1")
+            worksheet = workbook.ActiveSheet
+            For i As Integer = 1 To grid.Columns.Count
+                worksheet.Cells(1, i) = grid.Columns(i - 1).HeaderText
+            Next
+            For i As Integer = 0 To grid.Rows.Count - 1
+                For j As Integer = 0 To grid.Columns.Count - 1
+                    worksheet.Cells(i + 2, j + 1) = grid.Rows(i).Cells(j).Value.ToString()
+                Next
+            Next
+            worksheet.Rows.Item(1).Font.Bold = 1
+            worksheet.Rows.Item(1).HorizontalAlignment = 3
+            worksheet.Columns.AutoFit()
+            worksheet.Columns.HorizontalAlignment = 2
+            app.Visible = True
+            app = Nothing
+            workbook = Nothing
+            worksheet = Nothing
+            FileClose(1)
+            GC.Collect()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Exportar_Doc = False
+        End Try
+        Return Exportar_Doc
+    End Function
+    Public Function Importar_Doc(tabla As String, grid As DataGridView) As Boolean
+        Try
+            Importar_Doc = True
+            Dim myFileDialog As New OpenFileDialog()
+            Dim xSheet As String = ""
+
+            With myFileDialog
+                .Filter = “Archivos Excel(*.xls;*.xlsx)|*.xls;*xlsx|Todos los archivos(*.*)|*.*”
+                .Title = "Open File"
+                .ShowDialog()
+            End With
+            If myFileDialog.FileName.ToString <> "" Then
+                Dim ExcelFile As String = myFileDialog.FileName.ToString
+                xSheet = Obtener_Nombre_Hoja_Activa(ExcelFile)
+                Dim cadena As String = ("Provider=Microsoft.ACE.OLEDB.12.0;" & ("Data Source=" & (ExcelFile & ";Extended Properties=""Excel 12.0;Xml;HDR=YES;IMEX=2"";")))
+                Dim cadenaorigen As OleDbConnection
+                cadenaorigen = New OleDbConnection(cadena)
+                Dim cmdselect As OleDbCommand
+                cmdselect = New OleDbCommand("select * from [" & xSheet & "$]", cadenaorigen)
+                Dim adaptador As New OleDbDataAdapter
+                adaptador.SelectCommand = cmdselect
+                Dim ds As DataSet
+                ds = New DataSet
+                adaptador.Fill(ds)
+                grid.DataSource = ds.Tables(0)
+                maximo = grid.RowCount()
+                cadenaorigen.Close()
+                Dim cadenadestino As New SqlConnection
+                cadenadestino.ConnectionString = (server)
+                cadenadestino.Open()
+                Dim importar As SqlBulkCopy
+                importar = New SqlBulkCopy(cadenadestino)
+                importar.DestinationTableName = "" + tabla + ""
+                importar.WriteToServer(ds.Tables(0))
+                cadenadestino.Close()
+            End If
+        Catch ex As Exception
+            Importar_Doc = False
+            MsgBox(ex.Message)
+        End Try
+        Return Importar_Doc
+    End Function
+    Public Function Ejecutar_Procedure(procedure As String) As Boolean
+        Dim cmd As SqlCommand
+        Try
+            Ejecutar_Procedure = True
+            Using cnn As New SqlConnection(server)
+                cnn.Open()
+                cmd = New SqlCommand(procedure)
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Connection = cnn
+                If cmd.ExecuteNonQuery Then
+                    Dim dt As New DataTable
+                    Dim da As New SqlDataAdapter(cmd)
+                    da.Fill(dt)
+                Else
+                    Return Nothing
+                End If
+                cnn.Close()
+            End Using
+        Catch ex As Exception
+            Ejecutar_Procedure = False
+            MsgBox(ex.Message)
+        End Try
+    End Function
+    Public Function txt_autocomplete(consulta As String, campo As String, result As DevExpress.XtraEditors.TextEdit) As Boolean
+        Try
+            txt_autocomplete = True
+            Using cnn As New SqlConnection(server)
+                Dim cmd As New SqlCommand(consulta, cnn)
+                Dim ds As New DataSet
+                Dim da As New SqlDataAdapter(cmd)
+                da.Fill(ds, "lista")
+                Dim col As New AutoCompleteStringCollection
+                Dim i As Integer
+                For i = 0 To ds.Tables("lista").Rows.Count - 1
+                    col.Add(ds.Tables("lista").Rows(i)(campo).ToString())
+                Next
+                result.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+                result.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource
+                result.MaskBox.AutoCompleteCustomSource = col
+                cnn.Close()
+            End Using
+        Catch ex As Exception
+            txt_autocomplete = False
+            MsgBox(ex.Message)
+        End Try
+        Return txt_autocomplete
+    End Function
+    Public Function Obtener_Producto(ID As DevExpress.XtraEditors.TextEdit, Codigo As DevExpress.XtraEditors.TextEdit, Producto As DevExpress.XtraEditors.TextEdit, Marca As DevExpress.XtraEditors.TextEdit, CIF1 As DevExpress.XtraEditors.SpinEdit, CIF2 As DevExpress.XtraEditors.SpinEdit, Impuesto As DevExpress.XtraEditors.CheckEdit)
+        Using cnn As New SqlConnection(server)
+            Obtener_Producto = True
+            Dim cmd As New SqlCommand("SELECT P.CODIGO_COMPUESTO, P.PRODUCTO, M.NOMBRE'MARCA', P.CIF, P.IMPUESTO FROM PRODUCTOS P INNER JOIN MARCA M ON P.MARCA = M.ID_MARCA WHERE P.PRODUCTO + ' - ' +M.NOMBRE = '" + ID.EditValue + "'", cnn)
+            Dim ds As New DataSet
+            Dim da As New SqlDataAdapter(cmd)
+            Dim cn As String
+            da.Fill(ds)
+            For i = 0 To ds.Tables(0).Rows.Count - 1
+                Codigo.Text = ds.Tables(0).Rows(i)("CODIGO_COMPUESTO").ToString()
+                Producto.Text = ds.Tables(0).Rows(i)("PRODUCTO").ToString()
+                Marca.Text = ds.Tables(0).Rows(i)("MARCA").ToString()
+                'CIF1.Value = ds.Tables(0).Rows(i)("CIF")
+                'CIF2.Value = ds.Tables(0).Rows(i)("CIF")
+                cn = ds.Tables(0).Rows(i)("IMPUESTO").ToString()
+                If cn = "True" Then
+                    Impuesto.Checked = True
+                Else
+                    Impuesto.Checked = False
+                End If
+            Next
+            Obtener_Producto = False
+        End Using
+        Return Obtener_Producto
+    End Function
+    Public Function Llenar_Grid(ByVal codigo As String, grid As DataGridView) As Boolean
+        Try
+            Llenar_Grid = True
+            Dim tb As New DataTable
+            Dim strSql As String = "SELECT B.DESCRIPCION'BODEGA', PEB.EXISTENCIAS, PEB.DISPONIBILIDAD, PEB.PRECIO FROM PEB INNER JOIN BODEGA B ON PEB.ID_BODEGA = B.ID_BODEGA WHERE PEB.CODIGO_COMPUESTO = '" + codigo + "'"
+            Using cnn As New SqlConnection(server)
+                cnn.Open()
+                Using dad As New SqlDataAdapter(strSql, cnn)
+                    dad.Fill(tb)
+                End Using
+                cnn.Close()
+            End Using
+            grid.DataSource = tb
+        Catch ex As Exception
+            Llenar_Grid = False
+            MsgBox(ex.Message)
+        End Try
+        Return Llenar_Grid
+    End Function
+    Public Function Cordobizar(monto As Decimal) As Decimal
+        Try
+            Cordobizar = monto * 30.2686
+            Return Cordobizar
+        Catch ex As Exception
+
+        End Try
     End Function
 End Module
